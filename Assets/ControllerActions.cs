@@ -48,7 +48,7 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                     ""id"": ""7c317011-5f0b-46cb-83c4-b9596ded2316"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Move"",
