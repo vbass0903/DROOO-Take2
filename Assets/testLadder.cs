@@ -13,7 +13,6 @@ public class testLadder : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Entered");
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<playerMove>().isOnLadder = true;
@@ -22,7 +21,6 @@ public class testLadder : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Exited");
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<playerMove>().isOnLadder = false;
