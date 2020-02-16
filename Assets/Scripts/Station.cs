@@ -38,6 +38,7 @@ public class Station : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            collision.gameObject.GetComponent<playerMove>().nearStation = true;
             collision.gameObject.GetComponent<playerStation>().attachedStation = gameObject.name;
         }
     }
@@ -45,6 +46,7 @@ public class Station : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            collision.gameObject.GetComponent<playerMove>().nearStation = false;
             collision.gameObject.GetComponent<playerStation>().attachedStation = null;
         }
     }

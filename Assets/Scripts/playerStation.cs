@@ -68,16 +68,18 @@ public class playerStation : MonoBehaviour
                     isRightTurret = true;
                     TurretGun = GameObject.Find("TurretGun1");
                     TurretBody = GameObject.Find("TurretBody1");
+                    move = gameObject.GetComponent<playerMove>().move;
 
-                    joystickAngle = Mathf.Atan2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")) * Mathf.Rad2Deg;
+                    joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
                     TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle + 90, Vector3.forward);
                     break;
                 case "TurretStation2":
                     isLeftTurret = true;
                     TurretGun = GameObject.Find("TurretGun2");
                     TurretBody = GameObject.Find("TurretBody2");
+                    move = gameObject.GetComponent<playerMove>().move;
 
-                    joystickAngle = Mathf.Atan2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal")) * Mathf.Rad2Deg;
+                    joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
                     TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle - 90, Vector3.forward);
                     break;
             }

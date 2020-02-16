@@ -12,6 +12,7 @@ public class playerMove : MonoBehaviour
     public bool isGrounded = false;
     public bool isAttached = false;
     public bool isOnLadder = false;
+    public bool nearStation = false;
     //ControllerActions controls;
     Rigidbody2D rb;
     public Vector2 move;
@@ -74,7 +75,10 @@ public class playerMove : MonoBehaviour
 
     public void Attach(InputAction.CallbackContext context)
     {
-        isAttached = true;
+        if (nearStation)
+        {
+            isAttached = true;
+        }
     }
 
     public void Detach(InputAction.CallbackContext context)
