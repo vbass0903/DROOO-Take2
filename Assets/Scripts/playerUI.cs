@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerUI : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
-    public bool isTouching = false;
+    public bool isTouching;
 
     void Start()
     {
