@@ -51,13 +51,12 @@ public class TurretGun2 : MonoBehaviour
 
     void Fire()
     {
-        if (Player.GetComponent<playerMove>().isAttached && Player.GetComponent<playerStation>().isLeftTurret)
+        if (Player.GetComponent<playerStation>().isLeftTurret)
         {
             new_Bullet = Instantiate(Bullet, Turret.transform.position, Turret.transform.rotation);
             new_Bullet.transform.rotation = Turret.transform.rotation * new Quaternion(0, 0, 180, 0);
             new_Bullet.velocity = transform.right * speed;
-            Destroy(new_Bullet.gameObject, timeDestroy);
+            Destroy(new_Bullet, timeDestroy);
         }
-
     }
 }
