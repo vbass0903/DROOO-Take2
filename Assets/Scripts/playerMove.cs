@@ -11,6 +11,7 @@ public class playerMove : MonoBehaviour
     public float moveSpeed = 5f;
     public bool isGrounded = false;
     public bool isAttached = false;
+    public bool isOnLadder = false;
     //ControllerActions controls;
     Rigidbody2D rb;
     public Vector2 move;
@@ -31,11 +32,20 @@ public class playerMove : MonoBehaviour
     {
         if (!isAttached) //While not attached to a station, allow movement
         {
-            //Horizontal Movement
-            Vector3 movement = new Vector3(move.x, 0f, 0f);
+            //Movement
+            if (!isOnLadder)
+            {
+                move.y = 0f;
+                rb.gravityScale = 1f;
+            }
+            else
+            {
+                rb.gravityScale = 0f;
+            }
+            Vector3 movement = new Vector3(move.x, move.y, 0f);
             transform.position += movement * Time.fixedDeltaTime * moveSpeed;
 
-            //Adds variable jumping, tighter falling
+            /*Adds variable jumping, tighter falling
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y *
@@ -45,16 +55,16 @@ public class playerMove : MonoBehaviour
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y *
                     (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
-            }
+            }*/
         }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isGrounded && !isAttached) //Check for touching grounded surface and attachment
+        /*if (isGrounded && !isAttached) //Check for touching grounded surface and attachment
         {
             rb.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
-        }
+        }*/
     }
 
     public void Move(InputAction.CallbackContext context)
