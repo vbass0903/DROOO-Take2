@@ -24,6 +24,7 @@ public class playerStation : MonoBehaviour
     public float turretRotateSpeed = 100f;
     private float joystickAngle;
     private float angleModifier;
+    public GameObject[] players;
     Vector2 move;
 
     void Awake()
@@ -41,7 +42,7 @@ public class playerStation : MonoBehaviour
 
     void Update()
     {
-
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     void FixedUpdate()
@@ -56,7 +57,11 @@ public class playerStation : MonoBehaviour
 
                     Vector3 movement = new Vector3(move.x, move.y, 0f);
                     submarine.transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of submarine
-                    transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update player position to stay relevant to sub movement
+                    for (int i = 0; i < players.Length; i++)
+                    {
+                        players[i].transform.position += movement * Time.fixedDeltaTime * moveSpeed;
+                    }
+                    //transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update player position to stay relevant to sub movement
 
                     break;
                 case "TurretStation1":
