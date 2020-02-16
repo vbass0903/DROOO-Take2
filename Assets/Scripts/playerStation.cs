@@ -100,6 +100,7 @@ public class playerStation : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
+
         if (isAttach && isRightTurret)
         {
             TurretGun = GameObject.Find("TurretGun1");
