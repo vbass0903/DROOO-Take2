@@ -20,6 +20,7 @@ public class Station : MonoBehaviour
 
     void Awake()
     {
+
         attachUI = GameObject.Find("attachUI");
         detachUI = GameObject.Find("detachUI");
     }
@@ -49,5 +50,18 @@ public class Station : MonoBehaviour
             collision.gameObject.GetComponent<playerMove>().nearStation = false;
             collision.gameObject.GetComponent<playerStation>().attachedStation = null;
         }
+    }
+
+    bool CheckAttached(GameObject[] Players)
+    {
+        bool check = true;
+        for (int i = 0; i < Players.Length; i++)
+        {
+            if (!(Players[i].GetComponent<playerMove>().isAttached))
+            {
+                check = false;
+            }
+        }
+        return check;
     }
 }
