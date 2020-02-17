@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bar;
-    public float oxyGain = 50f;
+    public float oxyGain = 5f;
     void Start()
     {
 
@@ -21,7 +21,8 @@ public class BulletScript : MonoBehaviour
         if (col.CompareTag("Enemy"))
         {
             //collision.gameObject.GetComponent<Enemy>().rotateRate += 10;
-            bar.GetComponent<OxygenBar>().LoseOxy(oxyGain);
+            bar.GetComponent<OxygenBar>().GainOxy(oxyGain);
+            Destroy(col.gameObject);
             Destroy(gameObject);
         }
         if (col.CompareTag("Ground") || col.CompareTag("Wall"))
