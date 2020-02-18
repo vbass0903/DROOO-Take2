@@ -17,6 +17,10 @@ public class Grounded : MonoBehaviour
         {
             Player.GetComponent<playerMove>().isGrounded = true;
         }
+        if (collision.collider.tag == "Dead")
+        {
+            Destroy(Player.gameObject);
+        }
     }
     private void OnCollisionExit2D(Collision2D collision) //Once player leaves ground set isGrounded = false
     {

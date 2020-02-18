@@ -5,11 +5,13 @@ using UnityEngine;
 public class OxygenBar : MonoBehaviour
 {
     public GameObject bar;
+    public GameObject sub;
     public float oxygenDepleteRate = 0.3f;
     public float oxygenLevel;
     public void Start()
     {
         GameObject bar = GameObject.Find("Bar");
+        GameObject sub = GameObject.Find("Submarine");
         oxygenLevel = bar.transform.localScale.x;
     }
 
@@ -43,15 +45,20 @@ public class OxygenBar : MonoBehaviour
 
     public void Update()
     {
-        if(oxygenLevel < 0)
+        GameObject sub = GameObject.Find("Submarine");
+        if (oxygenLevel <= 0)
         {
-            oxygenLevel = 0; // and you lose!
+            Debug.Log("ran out of oxygen");
+            Destroy(sub.gameObject); // need lose function somewhere
+            oxygenLevel = 0;
             bar.transform.localScale = new Vector2(0, bar.transform.localScale.y);
+            
         }
         if(oxygenLevel > 352) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
         {
             oxygenLevel = 352;
             bar.transform.localScale = new Vector2(352, bar.transform.localScale.y);
         }
+
     }
 }
