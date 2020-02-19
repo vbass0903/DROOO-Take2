@@ -53,22 +53,25 @@ public class playerStation : MonoBehaviour
             {
                 case "PilotStation":
                     GameObject submarine = GameObject.Find("Submarine");
-                    move = gameObject.GetComponent<playerMove>().move;
-
-                    Vector3 movement = new Vector3(move.x, move.y, 0f);
-                    submarine.transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of submarine
-                    for (int i = 0; i < players.Length; i++)
+                    if (!(submarine.GetComponent<Submarine>().isDocked)) //Stops Movement while docked to purifier
                     {
-                        players[i].transform.position += movement * Time.fixedDeltaTime * moveSpeed;
+                        move = gameObject.GetComponent<playerMove>().move; //Reads input from joystick
+
+                        Vector3 movement = new Vector3(move.x, move.y, 0f);
+                        submarine.transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of submarine
+                        for (int i = 0; i < players.Length; i++)
+                        {
+                            players[i].transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of player relative to submarine
+                        }
                     }
-                    //transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update player position to stay relevant to sub movement
 
                     break;
                 case "TurretStation1":
                     isRightTurret = true;
                     TurretGun = GameObject.Find("TurretGun1");
                     TurretBody = GameObject.Find("TurretBody1");
-                    move = gameObject.GetComponent<playerMove>().move;
+
+                    move = gameObject.GetComponent<playerMove>().move; //Get joystick input
 
                     joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
                     TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle + 90, Vector3.forward);
@@ -77,7 +80,8 @@ public class playerStation : MonoBehaviour
                     isLeftTurret = true;
                     TurretGun = GameObject.Find("TurretGun2");
                     TurretBody = GameObject.Find("TurretBody2");
-                    move = gameObject.GetComponent<playerMove>().move;
+
+                    move = gameObject.GetComponent<playerMove>().move; //Get joystick input
 
                     joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
                     TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle - 90, Vector3.forward);
