@@ -49,15 +49,25 @@ public class OxygenBar : MonoBehaviour
         if (oxygenLevel <= 0)
         {
             Debug.Log("ran out of oxygen");
-            Destroy(sub.gameObject); // need lose function somewhere
+            sub.GetComponent<Submarine>().hasOxygen = false;
             oxygenLevel = 0;
             bar.transform.localScale = new Vector2(0, bar.transform.localScale.y);
-            
+            Destroy(sub.gameObject); // need lose function somewhere
+
         }
-        if(oxygenLevel > 352) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
+        if (oxygenLevel > 352) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
         {
             oxygenLevel = 352;
             bar.transform.localScale = new Vector2(352, bar.transform.localScale.y);
+        }
+
+        if (sub.gameObject.GetComponent<Submarine>().isDocked == true)
+        {
+            oxygenDepleteRate = 0f;
+        }
+        else
+        {
+            oxygenDepleteRate = 0.3f;
         }
 
     }

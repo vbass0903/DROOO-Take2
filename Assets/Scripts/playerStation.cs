@@ -53,10 +53,10 @@ public class playerStation : MonoBehaviour
             {
                 case "PilotStation":
                     GameObject submarine = GameObject.Find("Submarine");
+
                     if (!(submarine.GetComponent<Submarine>().isDocked)) //Stops Movement while docked to purifier
                     {
                         move = gameObject.GetComponent<playerMove>().move; //Reads input from joystick
-
                         Vector3 movement = new Vector3(move.x, move.y, 0f);
                         submarine.transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of submarine
                         for (int i = 0; i < players.Length; i++)
@@ -64,7 +64,6 @@ public class playerStation : MonoBehaviour
                             players[i].transform.position += movement * Time.fixedDeltaTime * moveSpeed; //Update position of player relative to submarine
                         }
                     }
-
                     break;
                 case "TurretStation1":
                     isRightTurret = true;

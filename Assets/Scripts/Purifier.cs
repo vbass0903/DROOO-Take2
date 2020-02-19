@@ -5,28 +5,31 @@ using UnityEngine;
 public class Purifier : MonoBehaviour
 {
     GameObject submarine;
+    GameObject purifierArrow;
+    GameObject spawnerSwarm;
     SpriteRenderer sprite;
     public float startTime;
     public float endTime;
-    public float surviveTime = 5f;
+    public float surviveTime = 1f;
     public bool completed = false;
     public bool inProgress = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         completed = false;
         submarine = GameObject.Find("Submarine");
         sprite = GetComponent<SpriteRenderer>();
+        purifierArrow = GameObject.Find("PurifierArrow");
+        spawnerSwarm = GameObject.Find("SwarmSpawners");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (completed)
         {
             submarine.GetComponentInParent<Submarine>().isDocked = false;
             sprite.color = new Color(1, 1, 1, 1);
+            this.gameObject.SetActive(false);
         }
 
         if (inProgress && Time.time > endTime)
@@ -47,6 +50,7 @@ public class Purifier : MonoBehaviour
             sprite.color = new Color(1, 1, 0, 1);
 
             submarine.GetComponentInParent<Submarine>().isDocked = true;
+            spawnerSwarm.GetComponent<SpawnerControl>().spawnAllowed = true;
         }
     }
 
@@ -55,6 +59,7 @@ public class Purifier : MonoBehaviour
         if (collision.gameObject.name == "Dock")
         {
             collision.gameObject.GetComponentInParent<Submarine>().isDocked = false;
+            spawnerSwarm.GetComponent<SpawnerControl>().spawnAllowed = false;
         }
     }
 
