@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public float hitpoints;
     public string nam;
     public Vector2 targetDirection;
-    float moveSpeed;
+    public float moveSpeed;
 
     public Enemy(int hp, string ID) 
     {
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     {
         sub = GameObject.Find("Submarine");
         _rb = GetComponent<Rigidbody2D>();
-        moveSpeed = Random.Range(2f, 3f);
+        moveSpeed = Random.Range(2f, 5f);
     }
 
     void Update()

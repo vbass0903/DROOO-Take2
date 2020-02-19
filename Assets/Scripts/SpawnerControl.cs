@@ -8,13 +8,13 @@ public class SpawnerControl : MonoBehaviour
     public Transform[] spawns;
     public GameObject enemy;
     int randomSpawn;
-    public static bool spawnAllowed;
+    public bool spawnAllowed;
     public float SpawnEveryXSeconds = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnAllowed = true;
+        spawnAllowed = false;
         InvokeRepeating("EnemySpawn", 0f, SpawnEveryXSeconds);
     }
 

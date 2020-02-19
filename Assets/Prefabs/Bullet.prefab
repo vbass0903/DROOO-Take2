@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1089422499250108201}
   bar: {fileID: 0}
-  oxyGain: 50
+  oxyGain: 5
 --- !u!61 &6181663223090560591
 BoxCollider2D:
   m_ObjectHideFlags: 0
