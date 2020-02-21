@@ -28,8 +28,6 @@ public class purifierProgress : MonoBehaviour
             progress = offset / purifier.GetComponent<Purifier>().surviveTime;
             compareProgress = 1 - progress;
 
-            Debug.Log(new Vector3(offset, progress, compareProgress));
-
             transform.localScale = new Vector3(transform.localScale.x, startScale - progress, transform.localScale.z);
         }
     }
