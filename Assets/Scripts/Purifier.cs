@@ -19,7 +19,7 @@ public class Purifier : MonoBehaviour
         completed = false;
         submarine = GameObject.Find("Submarine");
         sprite = GetComponent<SpriteRenderer>();
-        purifierArrow = GameObject.Find("PurifierArrow");
+        purifierArrow = transform.Find("PurifierArrow").gameObject; 
         spawnerSwarm = GameObject.Find("SwarmSpawners");
     }
 
@@ -30,6 +30,11 @@ public class Purifier : MonoBehaviour
             submarine.GetComponentInParent<Submarine>().isDocked = false;
             sprite.color = new Color(1, 1, 1, 1);
             this.gameObject.SetActive(false);
+        }
+
+        if (inProgress)
+        {
+            purifierArrow.SetActive(false);
         }
 
         if (inProgress && Time.time > endTime)
