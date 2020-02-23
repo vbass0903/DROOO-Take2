@@ -17,7 +17,7 @@ public class BulletScript : MonoBehaviour
         bar = GameObject.Find("OxygenBar");
     }
     private void OnTriggerEnter2D(Collider2D col)
-    {
+    {   
         if (col.CompareTag("Enemy"))
         {
             //collision.gameObject.GetComponent<Enemy>().rotateRate += 10;
@@ -25,14 +25,21 @@ public class BulletScript : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
-        if (col.CompareTag("Ground") || col.CompareTag("Wall"))
+        else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
-        if (col.CompareTag("Bullet"))
+        else if (col.CompareTag("Bullet"))
         {
             Destroy(gameObject);
             Destroy(col.gameObject);
+        }
+        else if (col.CompareTag("BigEnemy"))
+        {
+            Destroy(gameObject);
+            col.gameObject.GetComponent<Enemy>().moveSpeed += 0.05f;
+            col.gameObject.GetComponent<Enemy>().EyeFlash();
+
         }
     }
 

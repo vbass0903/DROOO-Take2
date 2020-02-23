@@ -7,10 +7,12 @@ public class Enemy : MonoBehaviour
     Rigidbody2D _rb;
     private GameObject sub;
     public GameObject bar;
+    SpriteRenderer sprite;
     public float hitpoints;
     public string nam;
     public Vector2 targetDirection;
-    float moveSpeed;
+    public float moveSpeed;
+    bool isBig;
 
     public Enemy(int hp, string ID) 
     {
@@ -21,7 +23,17 @@ public class Enemy : MonoBehaviour
     {
         sub = GameObject.Find("Submarine");
         _rb = GetComponent<Rigidbody2D>();
-        moveSpeed = Random.Range(2f, 3f);
+        sprite = GetComponent<SpriteRenderer>();
+        isBig = false;
+        if (gameObject.name == "BigEnemy")
+        {
+            isBig = true;
+            moveSpeed = 1f;
+        }
+        else
+        {
+            moveSpeed = Random.Range(2f, 3f);
+        }
     }
 
     void Update()
@@ -32,12 +44,44 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
+        if (isBig)
         {
-            bar.GetComponent<OxygenBar>().LoseOxy(25f);
-            Destroy(gameObject);
+            if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
+            {
+                bar.GetComponent<OxygenBar>().LoseOxy(200f);
+            }
+        }
+        else
+        {
+            if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
+            {
+                bar.GetComponent<OxygenBar>().LoseOxy(25f);
+                Destroy(gameObject);
+            }
         }
     }
+
+    public void EyeFlash()
+    {
+        StartCoroutine(Flash());
+    }
+
+    IEnumerator Flash()
+    {
+        for (int n = 0; n < 2; n++)
+        {
+            ChangeColor(Color.white);
+            yield return new WaitForSeconds(0.1f);
+            ChangeColor(Color.red);
+            yield return new WaitForSeconds(0.1f);
+            ChangeColor(Color.white);
+        }
+    }
+    private void ChangeColor(Color color)
+    {
+        sprite.color = color;
+    }
+
     private void MoveEnemy()
     {
         if (sub != null)
@@ -48,4 +92,6 @@ public class Enemy : MonoBehaviour
         else
             _rb.velocity = Vector3.zero;
     }
+
+
 }

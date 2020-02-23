@@ -10,6 +10,7 @@ TagManager:
   - Left
   - Enemy
   - Dead
+  - BigEnemy
   layers:
   - Default
   - TransparentFX
