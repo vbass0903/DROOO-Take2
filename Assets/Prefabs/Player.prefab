@@ -152,6 +152,8 @@ MonoBehaviour:
   moveSpeed: 5
   isGrounded: 0
   isAttached: 0
+  isOnLadder: 0
+  nearStation: 0
   move: {x: 0, y: 0}
 --- !u!114 &1384425271749190317
 MonoBehaviour:
@@ -176,6 +178,7 @@ MonoBehaviour:
   moveSpeed: 5
   attachedStation: 
   turretRotateSpeed: 70
+  players: []
 --- !u!114 &5949419854200949958
 MonoBehaviour:
   m_ObjectHideFlags: 0

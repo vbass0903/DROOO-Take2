@@ -25,6 +25,7 @@ public class playerStation : MonoBehaviour
     private float joystickAngle;
     private float angleModifier;
     public GameObject[] players;
+    GameObject minimap;
     Vector2 move;
 
     void Awake()
@@ -35,6 +36,7 @@ public class playerStation : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+        minimap = GameObject.Find("MinimapWindow");
         speed = 10f;
         timeBetweenShots = 0.5f;
         timeDestroy = 3f;
@@ -51,6 +53,11 @@ public class playerStation : MonoBehaviour
         {
             switch (attachedStation)
             {
+                case "MapStation":
+                    minimap.GetComponent<playerUI>().isTouching = true;
+
+                    break;
+
                 case "PilotStation":
                     GameObject submarine = GameObject.Find("Submarine");
 
@@ -87,6 +94,23 @@ public class playerStation : MonoBehaviour
                     break;
             }
         }
+
+        if (!playersScan())
+        {
+            minimap.GetComponent<playerUI>().isTouching = false;
+        }
+    }
+
+    bool playersScan()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].GetComponent<playerStation>().attachedStation == "MapStation")
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void Attach(InputAction.CallbackContext context)
