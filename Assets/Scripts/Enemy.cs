@@ -9,55 +9,45 @@ public class Enemy : MonoBehaviour
     public GameObject bar;
     SpriteRenderer sprite;
     public float hitpoints;
-    public string nam;
-    public Vector2 targetDirection;
+    Vector2 targetDirection;
+    public float minMoveSpeed;
+    public float maxMoveSpeed;
+    [System.NonSerialized]
     public float moveSpeed;
-    bool isBig;
+    public float OxyDamage;
+    bool isBig = false;
 
-    public Enemy(int hp, string ID) 
-    {
-        hitpoints = hp;
-        nam = ID;
-    }
     void Start()
     {
         sub = GameObject.Find("Submarine");
         _rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        isBig = false;
+        bar = GameObject.Find("OxygenBar");
+
         if (gameObject.name == "BigEnemy")
         {
             isBig = true;
-            moveSpeed = 1f;
         }
-        else
-        {
-            moveSpeed = Random.Range(2f, 3f);
-        }
+
+        moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
     }
 
     void Update()
     {
         //en.transform.RotateAround(sub.transform.position, Vector3.back, 20f * Time.deltaTime);
-        bar = GameObject.Find("OxygenBar");
+
+        if (hitpoints <= 0)
+        {
+            Destroy(gameObject);
+        }
         MoveEnemy();
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (isBig)
+        if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
         {
-            if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
-            {
-                bar.GetComponent<OxygenBar>().LoseOxy(200f);
-            }
-        }
-        else
-        {
-            if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
-            {
-                bar.GetComponent<OxygenBar>().LoseOxy(25f);
-                Destroy(gameObject);
-            }
+            bar.GetComponent<OxygenBar>().LoseOxy(OxyDamage);
+            Destroy(gameObject);
         }
     }
 

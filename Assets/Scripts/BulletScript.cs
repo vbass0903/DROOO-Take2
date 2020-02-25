@@ -20,9 +20,8 @@ public class BulletScript : MonoBehaviour
     {   
         if (col.CompareTag("Enemy"))
         {
-            //collision.gameObject.GetComponent<Enemy>().rotateRate += 10;
-            bar.GetComponent<OxygenBar>().GainOxy(oxyGain);
-            Destroy(col.gameObject);
+            col.GetComponent<Enemy>().hitpoints -= 1;
+            col.gameObject.GetComponent<Enemy>().EyeFlash();
             Destroy(gameObject);
         }
         else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
@@ -37,6 +36,7 @@ public class BulletScript : MonoBehaviour
         else if (col.CompareTag("BigEnemy"))
         {
             Destroy(gameObject);
+            col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().moveSpeed += 0.05f;
             col.gameObject.GetComponent<Enemy>().EyeFlash();
 
