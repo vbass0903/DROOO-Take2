@@ -6,7 +6,7 @@ public class OxygenBar : MonoBehaviour
 {
     public GameObject bar;
     public GameObject sub;
-    public float oxygenDepleteRate = 0.3f;
+    public float oxygenDepleteRate = 0.2f;
     public float oxygenLevel;
     public void Start()
     {
@@ -67,7 +67,7 @@ public class OxygenBar : MonoBehaviour
         }
         else
         {
-            oxygenDepleteRate = 0.3f;
+            oxygenDepleteRate = 0.2f;
         }
 
     }

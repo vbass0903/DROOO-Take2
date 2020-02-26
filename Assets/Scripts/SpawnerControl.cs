@@ -6,7 +6,8 @@ public class SpawnerControl : MonoBehaviour
 {
 
     public Transform[] spawns;
-    public GameObject enemy;
+    public GameObject[] enemy;
+    int randomEnemy;
     int randomSpawn;
     public bool spawnAllowed;
     public float SpawnEveryXSeconds = 3f;
@@ -22,14 +23,15 @@ public class SpawnerControl : MonoBehaviour
     {
         if (spawnAllowed)
         {
+            randomEnemy = Random.Range(0, enemy.Length);
             randomSpawn = Random.Range(0, spawns.Length);
             if (randomSpawn < 4)
             {
-                Instantiate(enemy, spawns[randomSpawn].position, Quaternion.identity);
+                Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, Quaternion.identity);
             }
             else //flip enemy to face right because spawners 5-8 are to the right of the ship
             {
-                Instantiate(enemy, spawns[randomSpawn].position, new Quaternion(Quaternion.identity.x,
+                Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, new Quaternion(Quaternion.identity.x,
                                                                                 Quaternion.identity.y + 180,
                                                                                 Quaternion.identity.z,
                                                                                 Quaternion.identity.w));

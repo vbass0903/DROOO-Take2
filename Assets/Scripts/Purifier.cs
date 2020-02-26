@@ -7,6 +7,7 @@ public class Purifier : MonoBehaviour
     GameObject submarine;
     GameObject purifierArrow;
     GameObject spawnerSwarm;
+    GameObject bar;
     SpriteRenderer sprite;
     public float startTime;
     public float endTime;
@@ -17,6 +18,7 @@ public class Purifier : MonoBehaviour
     void Start()
     {
         completed = false;
+        bar = GameObject.Find("OxygenBar");
         submarine = GameObject.Find("Submarine");
         sprite = GetComponent<SpriteRenderer>();
         purifierArrow = transform.Find("PurifierArrow").gameObject; 
@@ -39,6 +41,7 @@ public class Purifier : MonoBehaviour
 
         if (inProgress && Time.time > endTime)
         {
+            bar.GetComponent<OxygenBar>().GainOxy(352f);
             completed = true;
         }
     }

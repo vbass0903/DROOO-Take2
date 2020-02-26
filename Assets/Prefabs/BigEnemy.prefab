@@ -119,10 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
-  hitpoints: 0
-  nam: 
-  targetDirection: {x: -0.5720789, y: -0.008914715}
-  moveSpeed: 3
+  hitpoints: 100
+  minMoveSpeed: 1
+  maxMoveSpeed: 1
+  moveSpeed: 1
+  OxyDamage: 200
 --- !u!61 &5593099619489539919
 BoxCollider2D:
   m_ObjectHideFlags: 0
