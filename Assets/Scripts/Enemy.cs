@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     [System.NonSerialized]
     public float moveSpeed;
     public float OxyDamage;
-    bool isBig = false;
 
     void Start()
     {
@@ -23,11 +22,6 @@ public class Enemy : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         bar = GameObject.Find("OxygenBar");
-
-        if (gameObject.name == "BigEnemy")
-        {
-            isBig = true;
-        }
 
         moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
     }
