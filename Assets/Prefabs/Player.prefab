@@ -154,6 +154,7 @@ MonoBehaviour:
   isAttached: 0
   isOnLadder: 0
   nearStation: 0
+  stage: 0
   move: {x: 0, y: 0}
 --- !u!114 &1384425271749190317
 MonoBehaviour:
@@ -313,6 +314,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 31b03754-2f1f-4dc2-bed0-104ce4156dec
     m_ActionName: Gameplay/Move[/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1384425271749190314}
+        m_MethodName: Continue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 74b51ad8-804a-4178-985b-59188ed663c8
+    m_ActionName: Gameplay/Continue[/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

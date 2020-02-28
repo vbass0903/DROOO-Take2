@@ -608,7 +608,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 1
+  m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5138,7 +5138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1762334224}
-  sub: {fileID: 0}
+  sub: {fileID: 131719763}
   oxygenDepleteRate: 0.2
   oxygenLevel: 0
 --- !u!1 &1757490557

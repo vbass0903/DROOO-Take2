@@ -20,7 +20,7 @@ public class BulletScript : MonoBehaviour
     {   
         if (col.CompareTag("Dummy"))
         {
-            col.GetComponent<Tutorial>().hitpoints -= 1;
+            col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().EyeFlash();
             Destroy(gameObject);
         }

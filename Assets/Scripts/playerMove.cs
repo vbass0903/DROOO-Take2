@@ -13,6 +13,7 @@ public class playerMove : MonoBehaviour
     public bool isAttached = false;
     public bool isOnLadder = false;
     public bool nearStation = false;
+    public int stage = 0;
     //ControllerActions controls;
     Rigidbody2D rb;
     public Vector2 move;
@@ -84,5 +85,11 @@ public class playerMove : MonoBehaviour
     public void Detach(InputAction.CallbackContext context)
     {
         isAttached = false;
+    }
+
+    public void Continue(InputAction.CallbackContext context)
+    {
+        Debug.Log("Called");
+        stage++;
     }
 }

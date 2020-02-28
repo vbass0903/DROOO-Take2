@@ -57,6 +57,14 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""74b51ad8-804a-4178-985b-59188ed663c8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold""
                 }
             ],
             ""bindings"": [
@@ -114,6 +122,17 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62e4d5a1-89b3-4535-b2e4-0677866c408a"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -127,6 +146,7 @@ public class @ControllerActions : IInputActionCollection, IDisposable
         m_Gameplay_Detach = m_Gameplay.FindAction("Detach", throwIfNotFound: true);
         m_Gameplay_TurretFire = m_Gameplay.FindAction("TurretFire", throwIfNotFound: true);
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Gameplay_Continue = m_Gameplay.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,6 +201,7 @@ public class @ControllerActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Detach;
     private readonly InputAction m_Gameplay_TurretFire;
     private readonly InputAction m_Gameplay_Move;
+    private readonly InputAction m_Gameplay_Continue;
     public struct GameplayActions
     {
         private @ControllerActions m_Wrapper;
@@ -190,6 +211,7 @@ public class @ControllerActions : IInputActionCollection, IDisposable
         public InputAction @Detach => m_Wrapper.m_Gameplay_Detach;
         public InputAction @TurretFire => m_Wrapper.m_Gameplay_TurretFire;
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
+        public InputAction @Continue => m_Wrapper.m_Gameplay_Continue;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -214,6 +236,9 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Continue.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -233,6 +258,9 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
             }
         }
     }
@@ -244,5 +272,6 @@ public class @ControllerActions : IInputActionCollection, IDisposable
         void OnDetach(InputAction.CallbackContext context);
         void OnTurretFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }

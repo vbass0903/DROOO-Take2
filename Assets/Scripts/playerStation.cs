@@ -16,7 +16,7 @@ public class playerStation : MonoBehaviour
     public float timeBetweenShots;
     public float timeDestroy;
 
-    bool isAttach = false;
+    public bool isAttach = false;
     public bool isLeftTurret = false;
     public bool isRightTurret = false;
     public float moveSpeed = 5f; //Copied from playerMove, can be changed to change submarine move speed
