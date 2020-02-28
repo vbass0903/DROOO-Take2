@@ -18,6 +18,12 @@ public class BulletScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {   
+        if (col.CompareTag("Dummy"))
+        {
+            col.GetComponent<Enemy>().hitpoints -= 1;
+            col.gameObject.GetComponent<Enemy>().EyeFlash();
+            Destroy(gameObject);
+        }
         if (col.CompareTag("Enemy"))
         {
             col.GetComponent<Enemy>().hitpoints -= 1;
@@ -35,7 +41,6 @@ public class BulletScript : MonoBehaviour
         }
         else if (col.CompareTag("BigEnemy"))
         {
-            Destroy(gameObject);
             col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().moveSpeed += 0.05f;
             col.gameObject.GetComponent<Enemy>().EyeFlash();

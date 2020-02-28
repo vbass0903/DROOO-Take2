@@ -6,12 +6,10 @@ public class OxygenBar : MonoBehaviour
 {
     public GameObject bar;
     public GameObject sub;
-    public float oxygenDepleteRate = 0.2f;
+    public float oxygenDepleteRate;
     public float oxygenLevel;
     public void Start()
     {
-        GameObject bar = GameObject.Find("Bar");
-        GameObject sub = GameObject.Find("Submarine");
         oxygenLevel = bar.transform.localScale.x;
     }
 
@@ -40,7 +38,11 @@ public class OxygenBar : MonoBehaviour
 
     public void FixedUpdate() 
     {
-        DecreaseOxy(oxygenDepleteRate); // idk if this needs to be in update or fixedupdate
+        if (sub.gameObject.GetComponent<Submarine>().isDocked == true)
+        {
+            DecreaseOxy(oxygenDepleteRate); // idk if this needs to be in update or fixedupdate
+        }
+        
     }
 
     public void Update()
@@ -60,15 +62,5 @@ public class OxygenBar : MonoBehaviour
             oxygenLevel = 352;
             bar.transform.localScale = new Vector2(352, bar.transform.localScale.y);
         }
-
-        if (sub.gameObject.GetComponent<Submarine>().isDocked == true)
-        {
-            oxygenDepleteRate = 0f;
-        }
-        else
-        {
-            oxygenDepleteRate = 0.2f;
-        }
-
     }
 }
