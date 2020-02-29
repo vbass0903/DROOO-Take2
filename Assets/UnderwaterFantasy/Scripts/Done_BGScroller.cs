@@ -1,5 +1,4 @@
-﻿// scrolls a quad object
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Done_BGScroller : MonoBehaviour
@@ -8,10 +7,12 @@ public class Done_BGScroller : MonoBehaviour
 	public float tileWidth;
   
 	private Vector3 startPosition;
+	private GameObject sub;
 
 	void Start ()
 	{
-		startPosition = transform.position;	
+		startPosition = transform.position;
+		sub = GameObject.Find("Submarine");
 	}
 
 	void Update ()
