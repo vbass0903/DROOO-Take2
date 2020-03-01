@@ -12,6 +12,8 @@ TagManager:
   - Dead
   - BigEnemy
   - Dummy
+  - Arm
+  - Boss
   layers:
   - Default
   - TransparentFX
