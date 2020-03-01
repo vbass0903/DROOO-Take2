@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 5362612639369664325}
   - component: {fileID: 3540091552453420967}
   - component: {fileID: 6204325556940054684}
+  - component: {fileID: 1241788544942126538}
   m_Layer: 0
   m_Name: MinimapUpgrade
   m_TagString: Untagged
@@ -107,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074183617698971271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.686152, y: -8.103552, z: 7.9407043}
+  m_LocalPosition: {x: 12.686152, y: -8.103552, z: 17.70424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7937192089809446910}
@@ -149,9 +150,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 716383495
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c4797b928419e844aaef5d3f039aa7f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,6 +180,19 @@ CircleCollider2D:
   m_Offset: {x: 0.0000019073486, y: 0}
   serializedVersion: 2
   m_Radius: 1.2800001
+--- !u!114 &1241788544942126538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074183617698971271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c2c3a229f891c4e88d26ed4b68dd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &4580571003939762782
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +204,7 @@ GameObject:
   - component: {fileID: 1207802203323865723}
   - component: {fileID: 6665507187507929332}
   - component: {fileID: 7779946844014490805}
+  - component: {fileID: 2248011955320251945}
   m_Layer: 0
   m_Name: TurretUpgrade
   m_TagString: Untagged
@@ -205,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4580571003939762782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.313848, y: -8.103552, z: 7.9407043}
+  m_LocalPosition: {x: -17.313848, y: -8.103552, z: 17.70424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7937192089809446910}
@@ -247,9 +262,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 716383495
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c4797b928419e844aaef5d3f039aa7f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -277,6 +292,19 @@ CircleCollider2D:
   m_Offset: {x: -0.0000009536743, y: 0}
   serializedVersion: 2
   m_Radius: 1.2800001
+--- !u!114 &2248011955320251945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580571003939762782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c2c3a229f891c4e88d26ed4b68dd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1 &5961600649034326718
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7937192089809446910}
-  - component: {fileID: 5411591946448257795}
+  - component: {fileID: 802482957769410866}
   m_Layer: 0
   m_Name: UpgradeContainer
   m_TagString: Untagged
@@ -535,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6215539272293274287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7738624, y: 2.7734673, z: -25.644945}
+  m_LocalPosition: {x: 0.7738624, y: 1.9, z: -25.644945}
   m_LocalScale: {x: 0.3344482, y: 0.11945088, z: 1}
   m_Children:
   - {fileID: 8206159325002791606}
@@ -544,7 +572,7 @@ Transform:
   m_Father: {fileID: 6009794658015988126}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5411591946448257795
+--- !u!114 &802482957769410866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,15 +581,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6215539272293274287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c2c3a229f891c4e88d26ed4b68dd8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 95da6a8848723064e94f5e991f7c4e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submarine: {fileID: 4027112821182620281, guid: f03937e26f726ce4b8a9c3687616decc,
-    type: 3}
-  pilot: {fileID: 0}
-  minimap: {fileID: 0}
-  turretL: {fileID: 0}
-  turretR: {fileID: 0}
+  children:
+  - {fileID: 8689115655463618935}
+  - {fileID: 1074183617698971271}
+  - {fileID: 4580571003939762782}
 --- !u!1 &8689115655463618935
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +599,7 @@ GameObject:
   - component: {fileID: 8206159325002791606}
   - component: {fileID: 5101233610949081902}
   - component: {fileID: 807332455238150660}
+  - component: {fileID: 5569705812167260877}
   m_Layer: 0
   m_Name: PilotUpgrade
   m_TagString: Untagged
@@ -588,7 +615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8689115655463618935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3138485, y: 1.8964487, z: 7.9407043}
+  m_LocalPosition: {x: -2.3138485, y: 1.8964487, z: 17.70424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7937192089809446910}
@@ -630,9 +657,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 716383495
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c4797b928419e844aaef5d3f039aa7f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -660,6 +687,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0000019073486}
   serializedVersion: 2
   m_Radius: 1.2800001
+--- !u!114 &5569705812167260877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689115655463618935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c2c3a229f891c4e88d26ed4b68dd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
 --- !u!1001 &8136334650806090608
 PrefabInstance:
   m_ObjectHideFlags: 0

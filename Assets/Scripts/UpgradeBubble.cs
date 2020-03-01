@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class UpgradeBubble : MonoBehaviour
 {
-    public GameObject submarine, pilot, minimap, turretL, turretR;
+    GameObject upgradeMan, purifier;
+    public bool active;
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        active = false;
+        upgradeMan = transform.parent.gameObject;
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -20,9 +21,11 @@ public class UpgradeBubble : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.tag == "Wall" || collision.tag == "Ground")
         {
             Destroy(gameObject);
+            upgradeMan.GetComponent<UpgradeManager>().UpgradeStation(gameObject.name);
         }
     }
 }

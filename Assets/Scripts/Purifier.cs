@@ -30,8 +30,9 @@ public class Purifier : MonoBehaviour
         if (completed)
         {
             submarine.GetComponentInParent<Submarine>().isDocked = false;
+            spawnerSwarm.GetComponent<SpawnerControl>().spawnAllowed = false;
             sprite.color = new Color(1, 1, 1, 1);
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
 
         if (inProgress)
@@ -41,7 +42,7 @@ public class Purifier : MonoBehaviour
 
         if (inProgress && Time.time > endTime)
         {
-            bar.GetComponent<OxygenBar>().GainOxy(352f);
+            bar.GetComponent<OxygenBar>().GainOxy(50f);
             completed = true;
         }
     }
