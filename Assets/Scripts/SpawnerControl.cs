@@ -29,7 +29,7 @@ public class SpawnerControl : MonoBehaviour
             {
                 Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, Quaternion.identity);
             }
-            else //flip enemy to face right because spawners 5-8 are to the right of the ship
+            else 
             {
                 Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, new Quaternion(Quaternion.identity.x,
                                                                                 Quaternion.identity.y + 180,

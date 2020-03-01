@@ -50,7 +50,6 @@ public class OxygenBar : MonoBehaviour
         GameObject sub = GameObject.Find("Submarine");
         if (oxygenLevel <= 0)
         {
-            Debug.Log("ran out of oxygen");
             sub.GetComponent<Submarine>().hasOxygen = false;
             oxygenLevel = 0;
             bar.transform.localScale = new Vector2(0, bar.transform.localScale.y);
