@@ -19,11 +19,15 @@ public class purifierProgress : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (purifier.GetComponent<Purifier>().startTime != 0f)
+        if (!(purifier.GetComponent<Purifier>().completed))
         {
-            offset = Time.time - purifier.GetComponent<Purifier>().startTime;
-            progress = offset / purifier.GetComponent<Purifier>().surviveTime;
-            transform.localScale = new Vector3(transform.localScale.x, startScale - progress, transform.localScale.z);
+            if (purifier.GetComponent<Purifier>().startTime != 0f)
+            {
+                offset = Time.time - purifier.GetComponent<Purifier>().startTime;
+                progress = offset / purifier.GetComponent<Purifier>().surviveTime;
+                transform.localScale = new Vector3(transform.localScale.x, startScale - progress, transform.localScale.z);
+            }
         }
+        
     }
 }

@@ -38,7 +38,7 @@ public class OxygenBar : MonoBehaviour
 
     public void FixedUpdate() 
     {
-        if (sub.gameObject.GetComponent<Submarine>().isDocked == true)
+        if (!(sub.gameObject.GetComponent<Submarine>().isDocked))
         {
             DecreaseOxy(oxygenDepleteRate); // idk if this needs to be in update or fixedupdate
         }
@@ -56,10 +56,10 @@ public class OxygenBar : MonoBehaviour
             Destroy(sub.gameObject); // need lose function somewhere
 
         }
-        if (oxygenLevel > 352) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
+        if (oxygenLevel > 352f) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
         {
-            oxygenLevel = 352;
-            bar.transform.localScale = new Vector2(352, bar.transform.localScale.y);
+            oxygenLevel = 352f;
+            bar.transform.localScale = new Vector2(352f, bar.transform.localScale.y);
         }
     }
 }
