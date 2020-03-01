@@ -46,6 +46,29 @@ public class BulletScript : MonoBehaviour
             col.gameObject.GetComponent<Enemy>().EyeFlash();
 
         }
+        else if (col.CompareTag("Arm"))
+        {
+            col.GetComponent<Arm>().hitpoints -= 1;
+            col.gameObject.GetComponent<Arm>().ColorFlash(Color.red);
+            Destroy(gameObject);
+        }
+        else if (col.CompareTag("Boss"))
+        {
+            if (col.GetComponent<BossScript>().isDead == true)
+            {
+                Destroy(gameObject);
+            }
+            else if (col.GetComponent<BossScript>().isVulnerable == true)
+            {
+                col.GetComponent<BossScript>().hitpoints -= 1;
+                col.gameObject.GetComponent<BossScript>().ColorFlash(Color.red);
+                Destroy(gameObject);
+            }
+            else
+            {
+                col.gameObject.GetComponent<BossScript>().ColorFlash(Color.grey);
+                Destroy(gameObject);
+            }
+        }
     }
-
 }
