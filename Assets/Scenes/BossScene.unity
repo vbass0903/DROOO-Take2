@@ -592,7 +592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351296360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -0.5, z: -160.6875}
+  m_LocalPosition: {x: 10.3, y: 3.6, z: -160.6875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2853,12 +2853,12 @@ PrefabInstance:
     - target: {fileID: 7279194146938181948, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.9
+      value: 36.9
       objectReference: {fileID: 0}
     - target: {fileID: 7279194146938181948, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 7279194146938181948, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
@@ -2913,42 +2913,42 @@ PrefabInstance:
     - target: {fileID: 7279194146997644834, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194147080314637, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194147122950327, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194147765223877, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194148196043692, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194148427666471, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194148844361475, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7279194148937884352, guid: 1b665f9e35da1d64baf4679d0f26d004,
         type: 3}
       propertyPath: hitpoints
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b665f9e35da1d64baf4679d0f26d004, type: 3}
