@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     GameObject submarine, minimap;
+    GameObject[] players;
     GameObject purifier;
     public GameObject[] children;
     bool pilotSpeedUp = false, minimapOnUp = false, turretTripleUp = false;
@@ -20,12 +21,29 @@ public class UpgradeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
+
         if (!active)
         {
             turnOnBubbles();
         }
-        
 
+        if (turretTripleUp)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].GetComponent<playerStation>().turretLUpgrade = true;
+                players[i].GetComponent<playerStation>().turretRUpgrade = true;
+            }
+        }
+        
+        if (pilotSpeedUp)
+        {
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].GetComponent<playerStation>().moveSpeed = 8f;
+            }
+        }
 
         if (minimapOnUp)
         {
@@ -71,7 +89,13 @@ public class UpgradeManager : MonoBehaviour
             }
             active = true;
         }
+    }
 
-        
+    public void turnOffBubbles()
+    {
+        for (int i = 0; i < children.Length; i++)
+        {
+            children[i].SetActive(false);
+        }
     }
 }
