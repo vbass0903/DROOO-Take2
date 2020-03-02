@@ -637,6 +637,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder
@@ -3270,6 +3275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder
@@ -4128,6 +4138,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder
@@ -5002,6 +5017,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder
@@ -5298,6 +5318,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder
@@ -6225,6 +6250,11 @@ PrefabInstance:
       propertyPath: submarine
       value: 
       objectReference: {fileID: 1117232916}
+    - target: {fileID: 1689221346157908172, guid: 6b162e87e91bd564082808bbf1691969,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2623586768191073688, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: m_RootOrder

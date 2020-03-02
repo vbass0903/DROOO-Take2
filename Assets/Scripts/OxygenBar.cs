@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OxygenBar : MonoBehaviour
 {
@@ -50,10 +51,12 @@ public class OxygenBar : MonoBehaviour
         GameObject sub = GameObject.Find("Submarine");
         if (oxygenLevel <= 0)
         {
-            sub.GetComponent<Submarine>().hasOxygen = false;
+
+            SceneManager.LoadScene("SampleScene");
+            /*sub.GetComponent<Submarine>().hasOxygen = false;
             oxygenLevel = 0;
             bar.transform.localScale = new Vector2(0, bar.transform.localScale.y);
-            Destroy(sub.gameObject); // need lose function somewhere
+            Destroy(sub.gameObject); // need lose function somewhere*/
 
         }
         if (oxygenLevel > 352f) // 352 is max localScale,  CHANGES IF SUB SCALE CHANGES
