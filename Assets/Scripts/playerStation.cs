@@ -19,6 +19,8 @@ public class playerStation : MonoBehaviour
     public bool isAttach = false;
     public bool isLeftTurret = false;
     public bool isRightTurret = false;
+    public bool turretLUpgrade = false;
+    public bool turretRUpgrade = false;
     public float moveSpeed = 5f; //Copied from playerMove, can be changed to change submarine move speed
     public string attachedStation = null;
     public float turretRotateSpeed = 100f;
@@ -133,14 +135,41 @@ public class playerStation : MonoBehaviour
             TurretGun = GameObject.Find("TurretGun1");
             TurretBody = GameObject.Find("TurretBody1");
 
+            if (turretRUpgrade)
+            {
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position + new Vector3(0.5f,0.5f,0)), TurretGun.transform.rotation);
+                new_Bullet.velocity = (-TurretGun.transform.right + new Vector3(0f,0.075f,0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position - new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.velocity = (-TurretGun.transform.right - new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+            }
+            
+
             new_Bullet = Instantiate(Bullet, TurretGun.transform.position, TurretGun.transform.rotation);
             new_Bullet.velocity = -TurretGun.transform.right * speed;
             Destroy(new_Bullet.gameObject, timeDestroy);
+
+            
         }
         else if (isAttach && isLeftTurret)
         {
             TurretGun = GameObject.Find("TurretGun2");
             TurretBody = GameObject.Find("TurretBody2");
+
+            if (turretLUpgrade)
+            {
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position + new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);
+                new_Bullet.velocity = (TurretGun.transform.right + new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position - new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);
+                new_Bullet.velocity = (TurretGun.transform.right - new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+            }
 
             new_Bullet = Instantiate(Bullet, TurretGun.transform.position, TurretGun.transform.rotation);
             new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);

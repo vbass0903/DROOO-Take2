@@ -26,6 +26,7 @@ public class UpgradeBubble : MonoBehaviour
         {
             Destroy(gameObject);
             upgradeMan.GetComponent<UpgradeManager>().UpgradeStation(gameObject.name);
+            upgradeMan.GetComponent<UpgradeManager>().turnOffBubbles();
         }
     }
 }
