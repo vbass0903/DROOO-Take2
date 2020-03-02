@@ -71,7 +71,7 @@ public class @ControllerActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a36a40d4-9383-4360-b178-fbab1e518c36"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

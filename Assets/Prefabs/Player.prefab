@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1384425271749190314}
   - component: {fileID: 1384425271749190317}
   - component: {fileID: 5949419854200949958}
+  - component: {fileID: 8486209598349849139}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -148,13 +149,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 3
   lowJumpMultiplier: 2
-  jumpVelocity: 8
+  jumpVelocity: 3
   moveSpeed: 5
   isGrounded: 0
   isAttached: 0
   isOnLadder: 0
   nearStation: 0
-  stage: 0
+  stage: 40
   move: {x: 0, y: 0}
 --- !u!114 &1384425271749190317
 MonoBehaviour:
@@ -174,8 +175,11 @@ MonoBehaviour:
   speed: 1
   timeBetweenShots: 2
   timeDestroy: 5
+  isAttach: 0
   isLeftTurret: 0
   isRightTurret: 0
+  turretLUpgrade: 0
+  turretRUpgrade: 0
   moveSpeed: 5
   attachedStation: 
   turretRotateSpeed: 70
@@ -334,6 +338,18 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8486209598349849139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384425271749190315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe058c7dae7364699c556e4b62e73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1384425273294979609
 GameObject:
   m_ObjectHideFlags: 0

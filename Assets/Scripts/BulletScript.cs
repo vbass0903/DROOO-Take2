@@ -44,7 +44,7 @@ public class BulletScript : MonoBehaviour
             col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().moveSpeed += 0.05f;
             col.gameObject.GetComponent<Enemy>().EyeFlash();
-
+            Destroy(gameObject);
         }
         else if (col.CompareTag("Arm"))
         {

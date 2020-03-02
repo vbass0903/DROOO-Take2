@@ -7,7 +7,7 @@ public class playerMove : MonoBehaviour
 {
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
-    public float jumpVelocity = 7.5f;
+    public float jumpVelocity = 3f;
     public float moveSpeed = 5f;
     public bool isGrounded = false;
     public bool isAttached = false;
@@ -63,10 +63,10 @@ public class playerMove : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        /*if (isGrounded && !isAttached) //Check for touching grounded surface and attachment
+        if (isGrounded && !isAttached) //Check for touching grounded surface and attachment
         {
             rb.AddForce(new Vector2(0f, jumpVelocity), ForceMode2D.Impulse);
-        }*/
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -89,7 +89,6 @@ public class playerMove : MonoBehaviour
 
     public void Continue(InputAction.CallbackContext context)
     {
-        Debug.Log("Called");
         stage++;
     }
 }
