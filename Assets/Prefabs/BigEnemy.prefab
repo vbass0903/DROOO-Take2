@@ -120,9 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
   hitpoints: 100
-  minMoveSpeed: 1
-  maxMoveSpeed: 1
-  moveSpeed: 1
+  minMoveSpeed: 2
+  maxMoveSpeed: 2
   OxyDamage: 200
 --- !u!61 &5593099619489539919
 BoxCollider2D:
