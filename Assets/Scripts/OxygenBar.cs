@@ -56,7 +56,7 @@ public class OxygenBar : MonoBehaviour
             Destroy(sub.gameObject); // need lose function somewhere
 
         }
-        if (oxygenLevel > 352f) // 352 is max localScale,  CHANGES IF GAME SCALE CHANGES
+        if (oxygenLevel > 352f) // 352 is max localScale,  CHANGES IF SUB SCALE CHANGES
         {
             oxygenLevel = 352f;
             bar.transform.localScale = new Vector2(352f, bar.transform.localScale.y);

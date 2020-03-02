@@ -10,7 +10,7 @@ public class UpgradeManager : MonoBehaviour
     public GameObject[] children;
     bool pilotSpeedUp = false, minimapOnUp = false, turretTripleUp = false;
     bool active;
-    // Start is called before the first frame update
+
     void Start()
     {
         minimap = GameObject.Find("MinimapWindow");
@@ -18,7 +18,6 @@ public class UpgradeManager : MonoBehaviour
         purifier = transform.parent.gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
