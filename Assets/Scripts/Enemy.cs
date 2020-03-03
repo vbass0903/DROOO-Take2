@@ -15,9 +15,11 @@ public class Enemy : MonoBehaviour
     [System.NonSerialized]
     public float moveSpeed;
     public float OxyDamage;
+    private ParticleSystem particle; 
 
     void Start()
     {
+        particle = GetComponentInChildren<ParticleSystem>();
         sub = GameObject.Find("Submarine");
         _rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -52,6 +54,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Flash()
     {
+        //particle.Play();
         for (int n = 0; n < 2; n++)
         {
             ChangeColor(Color.white);
