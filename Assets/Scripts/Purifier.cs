@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Purifier : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Purifier : MonoBehaviour
     GameObject spawnerSwarm;
     GameObject bar;
     SpriteRenderer sprite;
+    Scene scene;
     public float startTime;
     public float endTime;
     public float surviveTime = 1f;
@@ -18,6 +20,8 @@ public class Purifier : MonoBehaviour
 
     void Start()
     {
+        //scene = SceneManager.GetActiveScene();
+        //DontDestroyOnLoad(this.gameObject);
         completed = false;
         bar = GameObject.Find("OxygenBar");
         submarine = GameObject.Find("Submarine");
@@ -28,6 +32,10 @@ public class Purifier : MonoBehaviour
 
     void Update()
     {
+        //if (scene.name == "BossScene")
+        //{
+        //    sprite.enabled = false;
+        //}
         if (completed)
         {
             inProgress = false;
