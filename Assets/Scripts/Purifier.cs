@@ -20,8 +20,8 @@ public class Purifier : MonoBehaviour
 
     void Start()
     {
-        scene = SceneManager.GetActiveScene();
-        DontDestroyOnLoad(this.gameObject);
+        //scene = SceneManager.GetActiveScene();
+        //DontDestroyOnLoad(this.gameObject);
         completed = false;
         bar = GameObject.Find("OxygenBar");
         submarine = GameObject.Find("Submarine");
@@ -32,10 +32,10 @@ public class Purifier : MonoBehaviour
 
     void Update()
     {
-        if (scene.name == "BossScene")
-        {
-            sprite.enabled = false;
-        }
+        //if (scene.name == "BossScene")
+        //{
+        //    sprite.enabled = false;
+        //}
         if (completed)
         {
             inProgress = false;

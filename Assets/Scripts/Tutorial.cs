@@ -66,7 +66,7 @@ public class Tutorial : MonoBehaviour
 
         if (stage == 2)
         {
-            if (submarine.transform.position.x >= 27f)
+            if (submarine.transform.position.x >= -51.364f)
             {
                 stage = 3;
             }
@@ -114,7 +114,7 @@ public class Tutorial : MonoBehaviour
                 Show(general[5]);
                 Hide(general[4]);
 
-                if ((Time.time - time) >= 27f)
+                if ((Time.time - time) >= 33f)
                 {
                     SceneManager.LoadScene("SampleScene");
                 }
