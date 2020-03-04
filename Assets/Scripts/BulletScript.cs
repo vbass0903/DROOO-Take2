@@ -30,10 +30,10 @@ public class BulletScript : MonoBehaviour
             col.gameObject.GetComponent<Enemy>().EyeFlash();
             Destroy(gameObject);
         }
-        else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
+        /*else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
         {
             Destroy(gameObject);
-        }
+        }*/
         else if (col.CompareTag("Bullet"))
         {
             Destroy(gameObject);
