@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [System.NonSerialized]
     public float moveSpeed;
     public float OxyDamage;
+    public bool canMove;
     private ParticleSystem particle; 
 
     void Start()
@@ -30,13 +31,24 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        //en.transform.RotateAround(sub.transform.position, Vector3.back, 20f * Time.deltaTime);
+        
+        if (gameObject.GetComponent<BigChase>() != null) {
+            canMove = gameObject.GetComponent<BigChase>().canMove;
+        }
+        else
+        {
+            canMove = true;
+        }
 
         if (hitpoints <= 0)
         {
             Destroy(gameObject);
         }
-        MoveEnemy();
+        if (canMove)
+        {
+            MoveEnemy();
+        }
+        
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -71,6 +83,7 @@ public class Enemy : MonoBehaviour
 
     private void MoveEnemy()
     {
+
         if (sub != null)
         {
             targetDirection = (sub.transform.position - transform.localPosition).normalized;

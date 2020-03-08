@@ -123,7 +123,8 @@ MonoBehaviour:
   hitpoints: 2
   minMoveSpeed: 2
   maxMoveSpeed: 3
-  OxyDamage: 40
+  OxyDamage: 10
+  canMove: 0
 --- !u!61 &6103702134683332951
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,7 +278,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
