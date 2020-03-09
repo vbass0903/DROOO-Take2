@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TurretGun1 : MonoBehaviour
+public class TurretGun4 : MonoBehaviour
 {
     GameObject Player;
     GameObject Turret;
@@ -24,8 +24,8 @@ public class TurretGun1 : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
-        Turret = GameObject.Find("TurretGun1");
-        Body = GameObject.Find("TurretBody1");
+        Turret = GameObject.Find("TurretGun4");
+        Body = GameObject.Find("TurretBody4");
 
         speed = 10f;
         timeBetweenShots = 0.5f;

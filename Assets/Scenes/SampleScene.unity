@@ -1765,8 +1765,8 @@ MonoBehaviour:
   players: []
   offset: {x: 0, y: 0, z: 0}
   smoothTime: 1
-  minZoom: 12
-  maxZoom: 17
+  minZoom: 15
+  maxZoom: 20
   zoomLimiter: 10
 --- !u!20 &519420031
 Camera:
@@ -1819,7 +1819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73, y: 2.675, z: -12.12}
+  m_LocalPosition: {x: -73, y: 5.96, z: -12.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 852153543}
@@ -3173,6 +3173,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &978863288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9730017277195095, guid: f03937e26f726ce4b8a9c3687616decc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4027112821280669738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &978863290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978863288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9234b5d2c8bd01646a071d6d35ca5639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 6378037305778157739, guid: d458bfa646d5d9b4a957b8079f7ffd3d, type: 3}
+  new_Bullet: {fileID: 6378037305778157739, guid: d458bfa646d5d9b4a957b8079f7ffd3d,
+    type: 3}
+  speed: 0
+  timeBetweenShots: 0
+  timeDestroy: 0
 --- !u!1001 &979295890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7035,22 +7059,22 @@ PrefabInstance:
     - target: {fileID: 4027112820452485746, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.14
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 4027112820452485746, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.2
+      value: 9.01
       objectReference: {fileID: 0}
     - target: {fileID: 4027112820844823248, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.33
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 4027112820844823248, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.68
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 4027112821182620281, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
@@ -7117,7 +7141,99 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.4082699
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4027112821703685653, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: oxygenDepleteRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027112821703685653, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: oxygenLevel
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265298654411751495, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: ecaaaa02d4f9b164db55d66655333ab1,
+        type: 3}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: ce260946-564d-4c8e-ace1-1727f9c33723
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Gameplay/Jump[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonWest]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: e93c064f-69cd-4c0e-a6a6-133a17d773ca
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Gameplay/Attach[/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 48fc5c0c-784d-4097-a294-87aeb94ef195
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Gameplay/Detach[/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonEast]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 7c317011-5f0b-46cb-83c4-b9596ded2316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Gameplay/TurretFire[/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 31b03754-2f1f-4dc2-bed0-104ce4156dec
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Gameplay/Move[/XInputControllerWindows/leftStick,/XInputControllerWindows/leftStick]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: 74b51ad8-804a-4178-985b-59188ed663c8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251161037072576906, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: Gameplay/Continue[/XInputControllerWindows/buttonNorth,/XInputControllerWindows/buttonNorth]
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2324852237623936818, guid: f03937e26f726ce4b8a9c3687616decc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f03937e26f726ce4b8a9c3687616decc, type: 3}
 --- !u!1 &4027112821280669739 stripped
 GameObject:

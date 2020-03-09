@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Submarine : MonoBehaviour
 {
-    Rigidbody2D rb;
+    GameObject sub;
     public bool isDocked = false;
     public bool hasOxygen = true;
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        sub = GameObject.Find("Submarine");
     }
 
     void Update()
     {
-
+        if (!(sub.GetComponent<Submarine>().isDocked))
+        {
+            sub.transform.position -= new Vector3(0f, 0.005f, 0f);
+        }
     }
 
 }

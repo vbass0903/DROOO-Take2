@@ -122,7 +122,7 @@ MonoBehaviour:
   hitpoints: 1
   minMoveSpeed: 5
   maxMoveSpeed: 5
-  OxyDamage: 25
+  OxyDamage: 10
 --- !u!61 &6103702134683332951
 BoxCollider2D:
   m_ObjectHideFlags: 0
