@@ -74,8 +74,9 @@ public class playerStation : MonoBehaviour
                         }
                     }
                     break;
-                case "TurretStation1":
+                case "TurretStation1": // lower right
                     isRightTurret = true;
+                    isLeftTurret = false;
                     TurretGun = GameObject.Find("TurretGun1");
                     TurretBody = GameObject.Find("TurretBody1");
 
@@ -84,10 +85,33 @@ public class playerStation : MonoBehaviour
                     joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
                     TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle + 90, Vector3.forward);
                     break;
-                case "TurretStation2":
+                case "TurretStation2": // upper left
                     isLeftTurret = true;
+                    isRightTurret = false;
                     TurretGun = GameObject.Find("TurretGun2");
                     TurretBody = GameObject.Find("TurretBody2");
+
+                    move = gameObject.GetComponent<playerMove>().move; //Get joystick input
+
+                    joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
+                    TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle - 90, Vector3.forward);
+                    break;
+                case "TurretStation3": // upper right
+                    isRightTurret = true;
+                    isLeftTurret = false;
+                    TurretGun = GameObject.Find("TurretGun3");
+                    TurretBody = GameObject.Find("TurretBody3");
+
+                    move = gameObject.GetComponent<playerMove>().move; //Get joystick input
+
+                    joystickAngle = Mathf.Atan2(move.y, move.x) * Mathf.Rad2Deg;
+                    TurretBody.transform.rotation = Quaternion.AngleAxis(joystickAngle + 90, Vector3.forward);
+                    break;
+                case "TurretStation4": // upper left
+                    isLeftTurret = true;
+                    isRightTurret = false;
+                    TurretGun = GameObject.Find("TurretGun4");
+                    TurretBody = GameObject.Find("TurretBody4");
 
                     move = gameObject.GetComponent<playerMove>().move; //Get joystick input
 
@@ -130,7 +154,29 @@ public class playerStation : MonoBehaviour
     public void Fire(InputAction.CallbackContext context)
     {
 
-        if (isAttach && isRightTurret)
+        if (attachedStation == "TurretStation3") // upper right turret
+        {
+            TurretGun = GameObject.Find("TurretGun3");
+            TurretBody = GameObject.Find("TurretBody3");
+
+            if (turretRUpgrade)
+            {
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position + new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.velocity = (-TurretGun.transform.right + new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position - new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.velocity = (-TurretGun.transform.right - new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+            }
+
+
+            new_Bullet = Instantiate(Bullet, TurretGun.transform.position, TurretGun.transform.rotation);
+            new_Bullet.velocity = -TurretGun.transform.right * speed;
+            Destroy(new_Bullet.gameObject, timeDestroy);
+
+        }
+        else if (attachedStation == "TurretStation1") // lower right turret
         {
             TurretGun = GameObject.Find("TurretGun1");
             TurretBody = GameObject.Find("TurretBody1");
@@ -153,8 +199,8 @@ public class playerStation : MonoBehaviour
 
             
         }
-        else if (isAttach && isLeftTurret)
-        {
+        else if (attachedStation == "TurretStation2") // upper left turret
+        { 
             TurretGun = GameObject.Find("TurretGun2");
             TurretBody = GameObject.Find("TurretBody2");
 
@@ -176,6 +222,30 @@ public class playerStation : MonoBehaviour
             new_Bullet.velocity = TurretGun.transform.right * speed;
             Destroy(new_Bullet.gameObject, timeDestroy);
         }
+        else if (attachedStation == "TurretStation4") // upper left turret
+        {
+            TurretGun = GameObject.Find("TurretGun4");
+            TurretBody = GameObject.Find("TurretBody4");
+
+            if (turretLUpgrade)
+            {
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position + new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);
+                new_Bullet.velocity = (TurretGun.transform.right + new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+
+                new_Bullet = Instantiate(Bullet, (TurretGun.transform.position - new Vector3(0.5f, 0.5f, 0)), TurretGun.transform.rotation);
+                new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);
+                new_Bullet.velocity = (TurretGun.transform.right - new Vector3(0f, 0.075f, 0f)) * speed;
+                Destroy(new_Bullet.gameObject, timeDestroy);
+            }
+
+            new_Bullet = Instantiate(Bullet, TurretGun.transform.position, TurretGun.transform.rotation);
+            new_Bullet.transform.rotation = TurretGun.transform.rotation * new Quaternion(0, 0, 180, 0);
+            new_Bullet.velocity = TurretGun.transform.right * speed;
+            Destroy(new_Bullet.gameObject, timeDestroy);
+        }
+
     }
 }
 
