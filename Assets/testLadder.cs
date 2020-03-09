@@ -16,6 +16,7 @@ public class testLadder : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<playerMove>().isOnLadder = true;
+            collision.gameObject.GetComponent<playerMove>().isGrounded = true;
         }
     }
 
@@ -24,6 +25,7 @@ public class testLadder : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<playerMove>().isOnLadder = false;
+            collision.gameObject.GetComponent<playerMove>().isGrounded = false;
         }
     }
 }

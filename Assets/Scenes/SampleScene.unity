@@ -640,12 +640,12 @@ PrefabInstance:
     - target: {fileID: 1675600491770953725, guid: 02ea72784443c7543bb1c011b7c452d7,
         type: 3}
       propertyPath: minMoveSpeed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1675600491770953725, guid: 02ea72784443c7543bb1c011b7c452d7,
         type: 3}
       propertyPath: maxMoveSpeed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ea72784443c7543bb1c011b7c452d7, type: 3}
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.1
+  scrollSpeed: 0.2
   tileWidth: 240
 --- !u!23 &526755281
 MeshRenderer:
@@ -2206,12 +2206,12 @@ PrefabInstance:
     - target: {fileID: 1675600491770953725, guid: 02ea72784443c7543bb1c011b7c452d7,
         type: 3}
       propertyPath: minMoveSpeed
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1675600491770953725, guid: 02ea72784443c7543bb1c011b7c452d7,
         type: 3}
       propertyPath: maxMoveSpeed
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ea72784443c7543bb1c011b7c452d7, type: 3}
@@ -4340,7 +4340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.1
+  scrollSpeed: 0.2
   tileWidth: 240
 --- !u!23 &1227867739
 MeshRenderer:
@@ -4519,7 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.25
+  scrollSpeed: 0.5
   tileWidth: 240
 --- !u!23 &1266678916
 MeshRenderer:
@@ -4853,7 +4853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.25
+  scrollSpeed: 0.2
   tileWidth: 240
 --- !u!23 &1427496364
 MeshRenderer:
@@ -5032,7 +5032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.1
+  scrollSpeed: 0.2
   tileWidth: 240
 --- !u!23 &1456296296
 MeshRenderer:
@@ -5211,7 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.25
+  scrollSpeed: 0.5
   tileWidth: 240
 --- !u!23 &1466151447
 MeshRenderer:
@@ -5485,7 +5485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.25
+  scrollSpeed: 0.5
   tileWidth: 240
 --- !u!23 &1644371156
 MeshRenderer:
@@ -6340,7 +6340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082fc32369ba4f9882f0eb561e6be77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.25
+  scrollSpeed: 0.5
   tileWidth: 240
 --- !u!23 &1842845277
 MeshRenderer:
@@ -7576,6 +7576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027112820428515870, guid: f03937e26f726ce4b8a9c3687616decc,
+        type: 3}
+      propertyPath: SpawnEveryXSeconds
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4027112820452485746, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
