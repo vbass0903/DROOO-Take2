@@ -193,4 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cd11a8cf17a4142bd70a492e3a34bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxyGain: 10
+  oxyGain: 5
