@@ -12,6 +12,7 @@ public class PressureBar : MonoBehaviour
     public float pressureLevel;
     public float subDepth;
     public float pressureCalc;
+    public SpriteRenderer sprite;
     public void Start()
     {
         GameObject sub = GameObject.Find("Submarine");
@@ -22,13 +23,35 @@ public class PressureBar : MonoBehaviour
     {
         
     }
+
+    public void ColorFlash(Color color)
+    {
+        StartCoroutine(Swap(color));
+    }
+
+    IEnumerator Swap(Color color)
+    {
+            Color orig_color = sprite.color;
+            ChangeColor(color);
+            yield return new WaitForSeconds(0f);
+            ChangeColor(orig_color);
+    }
+    private void ChangeColor(Color color)
+    {
+        sprite.color = color;
+    }
+
     public void Update()
     {
         pressureLevel = pBar.transform.localScale.x; // 0 , 161
         subDepth = sub.transform.position.y; // 
-        pressureCalc = 161f * (subDepth + 13f) / 39f;
+        pressureCalc = 161f * (subDepth + 13f) / 39f; // scales
         pBar.transform.localScale = new Vector3(pressureCalc, pBar.transform.localScale.y, pBar.transform.localScale.z);
-
+ 
+        if (pressureLevel < 161 && pressureLevel > 135 || pressureLevel < 25 && pressureLevel > 0)
+        {
+            ColorFlash(Color.white);
+        }
         if (pressureLevel <= 0)
         {
             oBar.GetComponent<OxygenBar>().LoseOxy(0.1f);
@@ -37,5 +60,6 @@ public class PressureBar : MonoBehaviour
         {
             oBar.GetComponent<OxygenBar>().LoseOxy(0.1f);
         }
+        
     } 
 }

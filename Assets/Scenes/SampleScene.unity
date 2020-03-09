@@ -1840,12 +1840,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307177977}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &368294165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4027112821703685655, guid: f03937e26f726ce4b8a9c3687616decc,
-    type: 3}
-  m_PrefabInstance: {fileID: 4027112821280669738}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &370725541
 GameObject:
   m_ObjectHideFlags: 0
@@ -11822,11 +11816,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4027112821703685653, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: oxygenDepleteRate
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 4027112821784196267, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -11862,11 +11851,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7285088938990985896, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: oBar
-      value: 
-      objectReference: {fileID: 368294165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f03937e26f726ce4b8a9c3687616decc, type: 3}
 --- !u!1 &4027112821280669739 stripped

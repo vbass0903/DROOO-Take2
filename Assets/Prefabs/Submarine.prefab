@@ -36426,7 +36426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 4027112821699384890}
   sub: {fileID: 4027112821182620281}
-  oxygenDepleteRate: 0.15
+  oxygenDepleteRate: 0.05
   oxygenLevel: 0
 --- !u!1 &4027112821784196266
 GameObject:
@@ -76094,12 +76094,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pBar: {fileID: 1251298441866946689}
-  oBar: {fileID: 4027112821699384890}
+  oBar: {fileID: 4027112821703685655}
   sub: {fileID: 4027112821182620281}
   rate: 0
   pressureLevel: 0
   subDepth: 0
   pressureCalc: 0
+  sprite: {fileID: 7064616207063584098}
 --- !u!1 &8774739345112610574
 GameObject:
   m_ObjectHideFlags: 0
