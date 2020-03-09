@@ -12,6 +12,8 @@ public class playerCamera : MonoBehaviour
     public float minZoom = 40f;
     public float maxZoom = 10f;
     public float zoomLimiter = 10f;
+    public float minY = 2.2f;
+    public float maxY = 13f;
 
     private Camera cam;
 
@@ -24,7 +26,9 @@ public class playerCamera : MonoBehaviour
     void Update()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
+        
     }
+
 
     void LateUpdate()
     {
@@ -35,6 +39,14 @@ public class playerCamera : MonoBehaviour
 
         Move();
         Zoom();
+        if (cam.transform.position.y >= 13)
+        {
+            cam.transform.position = new Vector3(cam.transform.position.x, 13f, cam.transform.position.z);
+        }
+        if (cam.transform.position.y <= 2.2)
+        {
+            cam.transform.position = new Vector3(cam.transform.position.x, 2.2f, cam.transform.position.z);
+        }
     }
 
     void Move()

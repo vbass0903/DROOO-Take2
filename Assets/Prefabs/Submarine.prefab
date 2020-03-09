@@ -76093,11 +76093,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef80ae34ed73e684cb574d87bc19202b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 1251298441866946689}
+  pBar: {fileID: 1251298441866946689}
+  oBar: {fileID: 4027112821699384890}
   sub: {fileID: 4027112821182620281}
   rate: 0
   pressureLevel: 0
   subDepth: 0
+  pressureCalc: 0
 --- !u!1 &8774739345112610574
 GameObject:
   m_ObjectHideFlags: 0
