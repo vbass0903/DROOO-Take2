@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
 
         if (hitpoints <= 0)
         {
+            particle.transform.parent = null;
             Destroy(gameObject);
         }
         if (canMove)
@@ -66,7 +67,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Flash()
     {
-        //particle.Play();
+        particle.Play();
         for (int n = 0; n < 2; n++)
         {
             ChangeColor(Color.white);
@@ -92,6 +93,4 @@ public class Enemy : MonoBehaviour
         else
             _rb.velocity = Vector3.zero;
     }
-
-
 }

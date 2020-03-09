@@ -31,10 +31,10 @@ public class SpawnerControl : MonoBehaviour
             }
             else 
             {
-                Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, new Quaternion(Quaternion.identity.x,
-                                                                                Quaternion.identity.y + 180,
-                                                                                Quaternion.identity.z,
-                                                                                Quaternion.identity.w));
+                Instantiate(enemy[randomEnemy], spawns[randomSpawn].position, Quaternion.identity); //new Quaternion(Quaternion.identity.x,
+                                                                                //Quaternion.identity.y + 180,
+                                                                                //Quaternion.identity.z,
+                                                                                // Quaternion.identity.w));
             }
         }
     }
