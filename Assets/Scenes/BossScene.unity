@@ -790,8 +790,8 @@ MonoBehaviour:
   players: []
   offset: {x: 0, y: 0, z: 0}
   smoothTime: 1
-  minZoom: 12
-  maxZoom: 14
+  minZoom: 15
+  maxZoom: 20
   zoomLimiter: 10
 --- !u!20 &519420031
 Camera:
@@ -820,7 +820,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13.079135
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
