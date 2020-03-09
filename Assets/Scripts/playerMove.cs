@@ -91,4 +91,9 @@ public class playerMove : MonoBehaviour
     {
         stage++;
     }
+
+    public void OnPlayerJoined()
+    {
+        //Debug.Log("Hello!");
+    }
 }

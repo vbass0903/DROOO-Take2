@@ -9,6 +9,7 @@ public class Tutorial : MonoBehaviour
     public GameObject[] general;
     public GameObject submarine;
     public GameObject purifier;
+    public GameObject upgrades;
     public GameObject[] players;
     public GameObject[] enemies;
     float time;
@@ -19,6 +20,7 @@ public class Tutorial : MonoBehaviour
     {
         players = GameObject.FindGameObjectsWithTag("Player");
         enemies = GameObject.FindGameObjectsWithTag("Dummy");
+
 
         for (int i = 1; i < general.Length; i++) //Hide every text, but show the first one
         {
@@ -89,6 +91,14 @@ public class Tutorial : MonoBehaviour
             }
         }
 
+        if (stage == 5)
+        {
+            if (upgrades.GetComponent<UpgradeManager>().pilotSpeedUp || upgrades.GetComponent<UpgradeManager>().minimapOnUp  || upgrades.GetComponent<UpgradeManager>().turretTripleUp)
+            {
+                stage = 6;
+            }
+        }
+
 
         switch (stage)
         {
@@ -113,6 +123,10 @@ public class Tutorial : MonoBehaviour
             case 5:
                 Show(general[5]);
                 Hide(general[4]);
+                break;
+            case 6:
+                Show(general[6]);
+                Hide(general[5]);
 
                 if ((Time.time - time) >= 33f)
                 {
