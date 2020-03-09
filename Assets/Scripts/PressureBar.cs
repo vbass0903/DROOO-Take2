@@ -13,10 +13,12 @@ public class PressureBar : MonoBehaviour
     public float subDepth;
     public float pressureCalc;
     public SpriteRenderer sprite;
+    private Color originalColor;
     public void Start()
     {
         GameObject sub = GameObject.Find("Submarine");
         GameObject oBar = GameObject.Find("OxygenBar");
+        originalColor = sprite.color;
     }
 
     public void FixedUpdate() 
@@ -51,6 +53,10 @@ public class PressureBar : MonoBehaviour
         if (pressureLevel < 161 && pressureLevel > 135 || pressureLevel < 25 && pressureLevel > 0)
         {
             ColorFlash(Color.white);
+        }
+        else
+        {
+            ChangeColor(originalColor);
         }
         if (pressureLevel <= 0)
         {
