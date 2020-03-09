@@ -270,7 +270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074183617698971271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.686152, y: -8.103552, z: 17.70424}
+  m_LocalPosition: {x: 20, y: -8.103552, z: 17.70424}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 9061785736442133487}
@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226125962067218957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.28, z: 0}
+  m_LocalPosition: {x: 0.01, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 8206159325002791606}
@@ -546,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4580571003939762782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.313848, y: -8.103552, z: 17.70424}
+  m_LocalPosition: {x: -25, y: -8.103552, z: 17.70424}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 9021916774654834396}
@@ -916,6 +916,9 @@ MonoBehaviour:
   - {fileID: 8689115655463618935}
   - {fileID: 1074183617698971271}
   - {fileID: 4580571003939762782}
+  pilotSpeedUp: 0
+  minimapOnUp: 0
+  turretTripleUp: 0
 --- !u!1 &8689115655463618935
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8689115655463618935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3138485, y: 1.8964487, z: 17.70424}
+  m_LocalPosition: {x: -2.3138485, y: 10.5, z: 17.70424}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 2858755835879999117}

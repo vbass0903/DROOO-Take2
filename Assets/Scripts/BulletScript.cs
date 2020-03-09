@@ -20,14 +20,16 @@ public class BulletScript : MonoBehaviour
     {   
         if (col.CompareTag("Dummy"))
         {
-            col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().EyeFlash();
+            col.GetComponent<Enemy>().hitpoints -= 1;
+            
             Destroy(gameObject);
         }
         if (col.CompareTag("Enemy"))
         {
-            col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().EyeFlash();
+            col.GetComponent<Enemy>().hitpoints -= 1;
+            
             Destroy(gameObject);
         }
         /*else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
@@ -41,9 +43,10 @@ public class BulletScript : MonoBehaviour
         }
         else if (col.CompareTag("BigEnemy"))
         {
+            col.gameObject.GetComponent<Enemy>().EyeFlash();
             col.GetComponent<Enemy>().hitpoints -= 1;
             col.gameObject.GetComponent<Enemy>().moveSpeed += 0.05f;
-            col.gameObject.GetComponent<Enemy>().EyeFlash();
+            
             Destroy(gameObject);
         }
         else if (col.CompareTag("Arm"))

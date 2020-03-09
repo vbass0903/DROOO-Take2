@@ -8,7 +8,7 @@ public class UpgradeManager : MonoBehaviour
     GameObject[] players;
     GameObject purifier;
     public GameObject[] children;
-    bool pilotSpeedUp = false, minimapOnUp = false, turretTripleUp = false;
+    public bool pilotSpeedUp = false, minimapOnUp = false, turretTripleUp = false;
     bool active;
 
     void Start()
