@@ -8,6 +8,7 @@ public class Station : MonoBehaviour
 {
     GameObject attachUI;
     GameObject detachUI;
+    Vector3 playerPos;
     SpriteRenderer sprite;
     public int hitpoints;
     public string nam;
@@ -41,8 +42,29 @@ public class Station : MonoBehaviour
         if (collision.tag == "Player")
         {
             //Debug.Log("Entered");
-            sprite.color = new Color(.5f, .5f, .5f, 1);
+            sprite.color = new Color(1, 1, 1, 0.5f);
 
+            switch (gameObject.name)
+            {
+                case "TurretStation1":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+                case "TurretStation2":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+                case "TurretStation3":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+                case "TurretStation4":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+                case "PilotStation":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+                case "MinimapStation":
+                    playerPos = transform.TransformPoint(Vector3.right * 2);
+                    break;
+            }
             collision.gameObject.GetComponent<playerMove>().nearStation = true;
             collision.gameObject.GetComponent<playerStation>().attachedStation = gameObject.name;
         }
@@ -50,7 +72,8 @@ public class Station : MonoBehaviour
         if (collision.tag == "Player" && collision.gameObject.GetComponent<playerMove>().isAttached)
         {
             //Debug.Log("Attached");
-            sprite.color = new Color(1, 1, 0, 1);
+            //collision.gameObject.transform.position = gameObject.transform.position;
+            sprite.color = new Color(1, 1, 1, 1);
         }
 
     }
@@ -59,8 +82,9 @@ public class Station : MonoBehaviour
         if (collision.tag == "Player")
         {
             //Debug.Log("Exited");
-            sprite.color = new Color(0, 0, 0, 1);
+            sprite.color = new Color(1, 1, 1, 1);
 
+            //collision.gameObject.transform.position = playerPos;
             collision.gameObject.GetComponent<playerMove>().nearStation = false;
             collision.gameObject.GetComponent<playerStation>().attachedStation = null;
         }
