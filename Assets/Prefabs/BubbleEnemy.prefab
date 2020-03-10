@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
-  hitpoints: 2
+  hitpoints: 1
   minMoveSpeed: 2
   maxMoveSpeed: 3
   OxyDamage: 20
