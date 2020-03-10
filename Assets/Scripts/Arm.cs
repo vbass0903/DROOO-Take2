@@ -61,7 +61,7 @@ public class Arm : MonoBehaviour
     {
         if (col.CompareTag("Ground") || col.CompareTag("Wall"))
         {
-            bar.GetComponent<OxygenBar>().LoseOxy(20f);
+            bar.GetComponent<OxygenBar>().LoseOxy(10f);
         }
     }
 }
