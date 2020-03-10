@@ -13,14 +13,11 @@ public class playerAutoJoin : MonoBehaviour
     void Start()
     {
         inputDevices = InputUser.GetUnpairedInputDevices();
-        Debug.Log(inputDevices);
 
         for (int i = 2; i < inputDevices.Count; i++)
         {
-            Debug.Log(inputDevices[i].name);
             if ((inputDevices[i].name).Contains("XInput"))
             {
-                Debug.Log("True");
                 gameObject.GetComponent<PlayerInputManager>().JoinPlayer(playerIndex: i, controlScheme: "ControllerActions", pairWithDevice: inputDevices[i]);
             }
         }
@@ -28,6 +25,5 @@ public class playerAutoJoin : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(InputUser.GetUnpairedInputDevices());
     }
 }
