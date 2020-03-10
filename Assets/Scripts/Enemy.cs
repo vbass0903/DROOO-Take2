@@ -58,7 +58,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("Hit");
             if (col.gameObject.GetComponentsInChildren<ParticleSystem>() != null)
             {
-                Debug.Log("ShipHit");
                 (col.GetComponentsInChildren<ParticleSystem>()[0]).Play();
             }
             bar.GetComponent<OxygenBar>().LoseOxy(OxyDamage);

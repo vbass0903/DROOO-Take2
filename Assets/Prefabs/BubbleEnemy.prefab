@@ -122,7 +122,7 @@ MonoBehaviour:
   hitpoints: 1
   minMoveSpeed: 2
   maxMoveSpeed: 3
-  OxyDamage: 20
+  OxyDamage: 5
   canMove: 0
 --- !u!58 &2792588128955867345
 CircleCollider2D:
