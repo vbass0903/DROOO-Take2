@@ -356,6 +356,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d50f3f05f2f3a684eababb07380484e5, type: 3}
   - {fileID: 21300000, guid: ee14b9293ac82004a932c67588c6b8e8, type: 3}
   - {fileID: 21300000, guid: 53b02177fa123d14f9103632f6e3f16e, type: 3}
+  action: {fileID: -944628639613478452, guid: ecaaaa02d4f9b164db55d66655333ab1, type: 3}
 --- !u!60 &1739451550051015223
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -40,7 +40,7 @@ public class Station : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Entered");
+            //Debug.Log("Entered");
             sprite.color = new Color(.5f, .5f, .5f, 1);
 
             collision.gameObject.GetComponent<playerMove>().nearStation = true;
@@ -49,7 +49,7 @@ public class Station : MonoBehaviour
 
         if (collision.tag == "Player" && collision.gameObject.GetComponent<playerMove>().isAttached)
         {
-            Debug.Log("Attached");
+            //Debug.Log("Attached");
             sprite.color = new Color(1, 1, 0, 1);
         }
 
@@ -58,7 +58,7 @@ public class Station : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("Exited");
+            //Debug.Log("Exited");
             sprite.color = new Color(0, 0, 0, 1);
 
             collision.gameObject.GetComponent<playerMove>().nearStation = false;
