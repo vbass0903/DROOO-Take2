@@ -29,7 +29,7 @@ public class TurretGun3 : MonoBehaviour
 
         speed = 10f;
         timeBetweenShots = 0.5f;
-        timeDestroy = 3f;
+        timeDestroy = 4f;
     }
 
     void Update()

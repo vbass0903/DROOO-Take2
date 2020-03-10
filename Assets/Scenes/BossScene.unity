@@ -793,6 +793,8 @@ MonoBehaviour:
   minZoom: 15
   maxZoom: 20
   zoomLimiter: 10
+  minY: 2.2
+  maxY: 13
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1349,6 +1351,8 @@ MonoBehaviour:
   minZoom: 12
   maxZoom: 14
   zoomLimiter: 10
+  minY: 2.2
+  maxY: 13
 --- !u!81 &852153545
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2780,41 +2784,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Submarine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -81.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -17.749218
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4027112821182620286, guid: f03937e26f726ce4b8a9c3687616decc,
         type: 3}
