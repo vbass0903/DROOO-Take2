@@ -11706,12 +11706,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4027112821280669738}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4027112821280669740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3532664556817266338, guid: f03937e26f726ce4b8a9c3687616decc,
-    type: 3}
-  m_PrefabInstance: {fileID: 4027112821280669738}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4027112821280669741 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3532664558630741526, guid: f03937e26f726ce4b8a9c3687616decc,
@@ -11740,7 +11734,7 @@ PrefabInstance:
         type: 3}
       propertyPath: turretR
       value: 
-      objectReference: {fileID: 4027112821280669740}
+      objectReference: {fileID: 0}
     - target: {fileID: 802482957769410866, guid: 6b162e87e91bd564082808bbf1691969,
         type: 3}
       propertyPath: turretL
