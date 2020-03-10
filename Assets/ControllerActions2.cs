@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/P2ControllerActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/ControllerActions2.inputactions'
 
 using System;
 using System.Collections;
@@ -6,22 +6,22 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @P2ControllerActions : IInputActionCollection, IDisposable
+public class @ControllerActions2 : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @P2ControllerActions()
+    public @ControllerActions2()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""P2ControllerActions"",
+    ""name"": ""ControllerActions2"",
     ""maps"": [
         {
             ""name"": ""Gameplay"",
-            ""id"": ""9538554f-b766-4ed0-a381-958eeda7fc1c"",
+            ""id"": ""f043abd6-c3b9-4632-96c4-06d1f9004d09"",
             ""actions"": [
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""9be37d22-4d77-4ca4-bd9f-04b4a42ad4e4"",
+                    ""id"": ""ce260946-564d-4c8e-ace1-1727f9c33723"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,7 +29,7 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Attach"",
                     ""type"": ""Button"",
-                    ""id"": ""9eef240f-d291-47ee-a00f-dcbb8251a73f"",
+                    ""id"": ""e93c064f-69cd-4c0e-a6a6-133a17d773ca"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -37,7 +37,7 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Detach"",
                     ""type"": ""Button"",
-                    ""id"": ""51d855a5-bf33-4fc3-bc85-27a26ca9eb65"",
+                    ""id"": ""48fc5c0c-784d-4097-a294-87aeb94ef195"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -45,33 +45,33 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""TurretFire"",
                     ""type"": ""Button"",
-                    ""id"": ""5e172e74-ca74-4891-a318-e759c6decd98"",
+                    ""id"": ""7c317011-5f0b-46cb-83c4-b9596ded2316"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""31b03754-2f1f-4dc2-bed0-104ce4156dec"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MoveL"",
+                    ""name"": ""Continue"",
                     ""type"": ""Button"",
-                    ""id"": ""54aac522-fcd5-4125-9370-9b0db056072d"",
+                    ""id"": ""74b51ad8-804a-4178-985b-59188ed663c8"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""MoveR"",
-                    ""type"": ""Button"",
-                    ""id"": ""3c79e0a5-28a5-41b2-9dd1-97a93d3b539c"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Hold""
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""29bbb99c-6cb7-4ac4-9a8c-fe77110698d9"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""a36a40d4-9383-4360-b178-fbab1e518c36"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,8 +81,8 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""63e5c4ad-4928-42fb-a441-6b4888318778"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""id"": ""910e20c4-7da0-4be8-85bd-2563be626d53"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,8 +92,8 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""88b42bc0-6cea-4975-9470-6caf4cc3c5a6"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""id"": ""efb36527-de22-4353-83ff-cba1649a2820"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -103,8 +103,8 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ab78b43e-f9c2-4eeb-87a0-15818e803c51"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""id"": ""08f0a578-4568-430a-a8a9-09129e54b715"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -114,23 +114,23 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f08b2bb0-302d-481e-8bd1-2e9689eff967"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""id"": ""50b80cf9-d58f-43ea-a0f5-8543a9400130"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveL"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""50a09c74-c1c5-488b-97c5-2e91381ae001"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""id"": ""62e4d5a1-89b3-4535-b2e4-0677866c408a"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveR"",
+                    ""action"": ""Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -145,8 +145,8 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
         m_Gameplay_Attach = m_Gameplay.FindAction("Attach", throwIfNotFound: true);
         m_Gameplay_Detach = m_Gameplay.FindAction("Detach", throwIfNotFound: true);
         m_Gameplay_TurretFire = m_Gameplay.FindAction("TurretFire", throwIfNotFound: true);
-        m_Gameplay_MoveL = m_Gameplay.FindAction("MoveL", throwIfNotFound: true);
-        m_Gameplay_MoveR = m_Gameplay.FindAction("MoveR", throwIfNotFound: true);
+        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Gameplay_Continue = m_Gameplay.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,18 +200,18 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Attach;
     private readonly InputAction m_Gameplay_Detach;
     private readonly InputAction m_Gameplay_TurretFire;
-    private readonly InputAction m_Gameplay_MoveL;
-    private readonly InputAction m_Gameplay_MoveR;
+    private readonly InputAction m_Gameplay_Move;
+    private readonly InputAction m_Gameplay_Continue;
     public struct GameplayActions
     {
-        private @P2ControllerActions m_Wrapper;
-        public GameplayActions(@P2ControllerActions wrapper) { m_Wrapper = wrapper; }
+        private @ControllerActions2 m_Wrapper;
+        public GameplayActions(@ControllerActions2 wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Attach => m_Wrapper.m_Gameplay_Attach;
         public InputAction @Detach => m_Wrapper.m_Gameplay_Detach;
         public InputAction @TurretFire => m_Wrapper.m_Gameplay_TurretFire;
-        public InputAction @MoveL => m_Wrapper.m_Gameplay_MoveL;
-        public InputAction @MoveR => m_Wrapper.m_Gameplay_MoveR;
+        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
+        public InputAction @Continue => m_Wrapper.m_Gameplay_Continue;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -233,12 +233,12 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 @TurretFire.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTurretFire;
                 @TurretFire.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTurretFire;
                 @TurretFire.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTurretFire;
-                @MoveL.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveL;
-                @MoveL.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveL;
-                @MoveL.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveL;
-                @MoveR.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveR;
-                @MoveR.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveR;
-                @MoveR.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveR;
+                @Move.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMove;
+                @Continue.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -255,12 +255,12 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
                 @TurretFire.started += instance.OnTurretFire;
                 @TurretFire.performed += instance.OnTurretFire;
                 @TurretFire.canceled += instance.OnTurretFire;
-                @MoveL.started += instance.OnMoveL;
-                @MoveL.performed += instance.OnMoveL;
-                @MoveL.canceled += instance.OnMoveL;
-                @MoveR.started += instance.OnMoveR;
-                @MoveR.performed += instance.OnMoveR;
-                @MoveR.canceled += instance.OnMoveR;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
             }
         }
     }
@@ -271,7 +271,7 @@ public class @P2ControllerActions : IInputActionCollection, IDisposable
         void OnAttach(InputAction.CallbackContext context);
         void OnDetach(InputAction.CallbackContext context);
         void OnTurretFire(InputAction.CallbackContext context);
-        void OnMoveL(InputAction.CallbackContext context);
-        void OnMoveR(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }

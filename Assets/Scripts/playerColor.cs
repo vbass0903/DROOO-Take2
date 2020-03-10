@@ -9,26 +9,26 @@ public class playerColor : MonoBehaviour
     public Sprite[] playerSprites;
     SpriteRenderer sprite;
     PlayerInput playerInput;
-    public InputActionAsset action;
+    public InputActionAsset[] action;
     // Start is called before the first frame update
     void Awake()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         playerInput = gameObject.GetComponent<PlayerInput>();
-        Debug.Log(playerInput.currentControlScheme);
-        Debug.Log(playerInput.currentActionMap);
         playerInput.defaultActionMap = "Gameplay";
-        playerInput.actions = action;
 
+        gameObject.GetComponent<SpriteRenderer>().sprite = playerSprites[(players.Length - 1)];
+        playerInput.actions = action[(players.Length - 1)];
         playerInput.neverAutoSwitchControlSchemes = true;
     }
 
     void LateStart()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
+        /*players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<SpriteRenderer>().sprite = playerSprites[i];
-        }
+        }*/
         
     }
 

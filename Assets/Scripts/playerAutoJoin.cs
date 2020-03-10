@@ -12,15 +12,17 @@ public class playerAutoJoin : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log(InputUser.GetUnpairedInputDevices());
         inputDevices = InputUser.GetUnpairedInputDevices();
-        //gameObject.GetComponent<PlayerInputManager>().JoinPlayer(controlScheme: "ControllerActions", pairWithDevice: inputDevices[2]);
-
-
+        Debug.Log(inputDevices);
 
         for (int i = 2; i < inputDevices.Count; i++)
         {
-            gameObject.GetComponent<PlayerInputManager>().JoinPlayer(playerIndex: i, controlScheme: "ControllerActions", pairWithDevice: inputDevices[i]);
+            Debug.Log(inputDevices[i].name);
+            if ((inputDevices[i].name).Contains("XInput"))
+            {
+                Debug.Log("True");
+                gameObject.GetComponent<PlayerInputManager>().JoinPlayer(playerIndex: i, controlScheme: "ControllerActions", pairWithDevice: inputDevices[i]);
+            }
         }
     }
 

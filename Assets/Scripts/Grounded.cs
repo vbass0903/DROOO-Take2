@@ -12,7 +12,7 @@ public class Grounded : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) //Once player touches ground set isGrounded = true
     {
-        if (collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground" || collision.collider.GetComponent<Station>() != null)
         {
             Player.GetComponent<playerMove>().isGrounded = true;
         }
