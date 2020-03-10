@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/ControllerActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/ControllerActions3.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @ControllerActions : IInputActionCollection, IDisposable
+public class @ControllerActions3 : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @ControllerActions()
+    public @ControllerActions3()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""ControllerActions"",
+    ""name"": ""ControllerActions3"",
     ""maps"": [
         {
             ""name"": ""Gameplay"",
@@ -204,8 +204,8 @@ public class @ControllerActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Continue;
     public struct GameplayActions
     {
-        private @ControllerActions m_Wrapper;
-        public GameplayActions(@ControllerActions wrapper) { m_Wrapper = wrapper; }
+        private @ControllerActions3 m_Wrapper;
+        public GameplayActions(@ControllerActions3 wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Attach => m_Wrapper.m_Gameplay_Attach;
         public InputAction @Detach => m_Wrapper.m_Gameplay_Detach;
