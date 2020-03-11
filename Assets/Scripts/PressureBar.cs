@@ -14,16 +14,16 @@ public class PressureBar : MonoBehaviour
     public float pressureCalc;
     public SpriteRenderer sprite;
     private Color originalColor;
+    private Scene scene;
+    private string scene_name;
+
     public void Start()
     {
         GameObject sub = GameObject.Find("Submarine");
         GameObject oBar = GameObject.Find("OxygenBar");
+        scene = SceneManager.GetActiveScene();
+        scene_name = scene.name;
         originalColor = sprite.color;
-    }
-
-    public void FixedUpdate() 
-    {
-        
     }
 
     public void ColorFlash(Color color)
@@ -46,11 +46,19 @@ public class PressureBar : MonoBehaviour
     public void Update()
     {
         pressureLevel = pBar.transform.localScale.x; // 0 , 161
-        subDepth = sub.transform.position.y; // 
-        pressureCalc = 161f * (subDepth + 13f) / 39f; // scales
+        subDepth = sub.transform.position.y;
+        switch (scene_name)
+        {
+            case "SampleScene":
+                pressureCalc = 161f * (subDepth + 13f) / 39f;
+                break;
+            case "BossScene":
+                pressureCalc = 161f * (subDepth + 53f) / 101f;
+                break;
+        }
         pBar.transform.localScale = new Vector3(pressureCalc, pBar.transform.localScale.y, pBar.transform.localScale.z);
  
-        if (pressureLevel < 161 && pressureLevel > 135 || pressureLevel < 25 && pressureLevel > 0)
+        if (pressureLevel < 161 && pressureLevel > 145 || pressureLevel < 20 && pressureLevel > 0)
         {
             ColorFlash(Color.white);
         }

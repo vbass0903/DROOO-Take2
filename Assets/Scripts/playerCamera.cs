@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [RequireComponent(typeof(Camera))]
 public class playerCamera : MonoBehaviour
@@ -16,11 +18,15 @@ public class playerCamera : MonoBehaviour
     public float maxY = 13f;
 
     private Camera cam;
+    private Scene scene;
+    private string scene_name;
 
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
         cam = GetComponent<Camera>();
+        scene = SceneManager.GetActiveScene();
+        scene_name = scene.name;
     }
 
     void Update()
@@ -39,13 +45,25 @@ public class playerCamera : MonoBehaviour
 
         Move();
         Zoom();
-        if (cam.transform.position.y >= 13)
-        {
-            cam.transform.position = new Vector3(cam.transform.position.x, 13f, cam.transform.position.z);
-        }
-        if (cam.transform.position.y <= 2.2)
-        {
-            cam.transform.position = new Vector3(cam.transform.position.x, 2.2f, cam.transform.position.z);
+        switch (scene_name) {
+            case "SampleScene":
+                if (cam.transform.position.y >= 13)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, 13f, cam.transform.position.z);
+                }
+                if (cam.transform.position.y <= 2.2)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, 2.2f, cam.transform.position.z);
+                }break;
+            case "BossScene":
+                if (cam.transform.position.y >= 46f)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, 46f, cam.transform.position.z);
+                }
+                if (cam.transform.position.y <= -33f)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, -33f, cam.transform.position.z);
+                }break;
         }
     }
 
