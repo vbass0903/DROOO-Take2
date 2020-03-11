@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038914784011364834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.854852, y: 3.6278186, z: 18}
+  m_LocalPosition: {x: 13.854852, y: 3.6278186, z: 5.6}
   m_LocalScale: {x: 0.17179228, y: 0.19838737, z: 1}
   m_Children:
   - {fileID: 1006144755309828587}
@@ -135,9 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
   hitpoints: 4
-  minMoveSpeed: 2
+  minMoveSpeed: 1
   maxMoveSpeed: 3
-  OxyDamage: 10
+  OxyDamage: 7
   canMove: 0
 --- !u!61 &6103702134683332951
 BoxCollider2D:
@@ -724,7 +724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024642187273364636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -12.12}
+  m_LocalPosition: {x: 0, y: 0, z: -29.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1038914784011364836}
