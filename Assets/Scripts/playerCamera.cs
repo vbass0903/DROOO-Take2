@@ -64,6 +64,15 @@ public class playerCamera : MonoBehaviour
                 {
                     cam.transform.position = new Vector3(cam.transform.position.x, -33f, cam.transform.position.z);
                 }break;
+            case "Tutorial1":
+                if (cam.transform.position.y >= 30f)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, 30f, cam.transform.position.z);
+                }
+                if (cam.transform.position.y <= -34f)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, -34f, cam.transform.position.z);
+                }break;
         }
     }
 

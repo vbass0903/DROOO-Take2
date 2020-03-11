@@ -55,6 +55,9 @@ public class PressureBar : MonoBehaviour
             case "BossScene":
                 pressureCalc = 161f * (subDepth + 53f) / 101f;
                 break;
+            case "Tutorial1":
+                pressureCalc = 161f * (subDepth + 35) / 69f;
+                break;
         }
         pBar.transform.localScale = new Vector3(pressureCalc, pBar.transform.localScale.y, pBar.transform.localScale.z);
  
