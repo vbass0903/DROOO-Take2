@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bar;
+    public GameObject sub;
     public float oxyGain = 5f;
     void Start()
     {
@@ -15,6 +16,7 @@ public class BulletScript : MonoBehaviour
     {
         bullet = GameObject.Find("Bullet(Clone)");
         bar = GameObject.Find("OxygenBar");
+        sub = GameObject.Find("Submarine");
     }
     private void OnTriggerEnter2D(Collider2D col)
     {   
@@ -32,10 +34,7 @@ public class BulletScript : MonoBehaviour
             
             Destroy(gameObject);
         }
-        /*else if (col.CompareTag("Ground") || col.CompareTag("Wall"))
-        {
-            Destroy(gameObject);
-        }*/
+
         else if (col.CompareTag("Bullet"))
         {
             Destroy(gameObject);
@@ -61,7 +60,7 @@ public class BulletScript : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            else if (col.GetComponent<BossScript>().isVulnerable == true)
+            else if (col.GetComponent<BossScript>().isVulnerable == true || sub.GetComponent<Submarine>().canDamageBoss == true)
             {
                 col.GetComponent<BossScript>().hitpoints -= 1;
                 col.gameObject.GetComponent<BossScript>().ColorFlash(Color.red);

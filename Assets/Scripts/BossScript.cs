@@ -46,6 +46,7 @@ public class BossScript : MonoBehaviour
             {
                 case 0:
                     isVulnerable = true;
+                    sub.GetComponent<Submarine>().canDamageBoss = true;
                     spawnerSwarm.GetComponent<SpawnerControl>().spawnAllowed = true;
                     break;
                 case 2:
