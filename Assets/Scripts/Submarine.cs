@@ -7,7 +7,6 @@ public class Submarine : MonoBehaviour
     GameObject sub;
     public bool isDocked = false;
     public bool hasOxygen = true;
-    public bool canDamageBoss = false;
 
     void Start()
     {

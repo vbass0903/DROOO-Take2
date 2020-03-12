@@ -60,7 +60,7 @@ public class BulletScript : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            else if (col.GetComponent<BossScript>().isVulnerable == true || sub.GetComponent<Submarine>().canDamageBoss == true)
+            else if (col.GetComponent<BossScript>().isVulnerable == true)
             {
                 col.GetComponent<BossScript>().hitpoints -= 1;
                 col.gameObject.GetComponent<BossScript>().ColorFlash(Color.red);

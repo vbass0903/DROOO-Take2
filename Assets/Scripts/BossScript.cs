@@ -41,12 +41,11 @@ public class BossScript : MonoBehaviour
         }
         if (!isDead)
         {
-            boss.transform.RotateAround(rotatePoint.transform.position, Vector3.back, bossSpeed * Time.deltaTime);
+            //boss.transform.RotateAround(rotatePoint.transform.position, Vector3.back, bossSpeed * Time.deltaTime);
             switch (numArms)
             {
                 case 0:
                     isVulnerable = true;
-                    sub.GetComponent<Submarine>().canDamageBoss = true;
                     spawnerSwarm.GetComponent<SpawnerControl>().spawnAllowed = true;
                     break;
                 case 2:
