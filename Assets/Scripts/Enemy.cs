@@ -55,7 +55,6 @@ public class Enemy : MonoBehaviour
     {
         if (col.CompareTag("Ground") || col.CompareTag("Wall")) // enemy hitting ship depletes oxygen
         {
-            Debug.Log("Hit");
             if (col.gameObject.GetComponentsInChildren<ParticleSystem>() != null)
             {
                 (col.GetComponentsInChildren<ParticleSystem>()[0]).Play();

@@ -41,7 +41,9 @@ public class Tutorial : MonoBehaviour
         {
             for (int i = 0; i < players.Length; i++)
             {
-                if ((players[i].GetComponent<playerStation>().attachedStation == "TurretStation1" || players[i].GetComponent<playerStation>().attachedStation == "TurretStation2") && players[i].GetComponent<playerStation>().isAttach)
+                if ((players[i].GetComponent<playerStation>().attachedStation == "TurretStation1" || players[i].GetComponent<playerStation>().attachedStation == "TurretStation2" 
+                    || players[i].GetComponent<playerStation>().attachedStation == "TurretStation3" || players[i].GetComponent<playerStation>().attachedStation == "TurretStation4")
+                    && players[i].GetComponent<playerStation>().isAttach)
                 {
                     stage = 1;
                 }
