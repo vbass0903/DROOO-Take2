@@ -41,7 +41,7 @@ public class BossScript : MonoBehaviour
         }
         if (!isDead)
         {
-            //boss.transform.RotateAround(rotatePoint.transform.position, Vector3.back, bossSpeed * Time.deltaTime);
+            boss.transform.RotateAround(rotatePoint.transform.position, Vector3.back, bossSpeed * Time.deltaTime);
             switch (numArms)
             {
                 case 0:
